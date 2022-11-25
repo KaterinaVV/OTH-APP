@@ -1,0 +1,80 @@
+app:
+  http:
+    connection-timout: 10000
+    connect-timout: 10000
+    socket-timout: 10000
+  exchange:
+    username: IM_OTH_APP_Veranstaltungen_Service@hs-regensburg.de
+    password: password
+    uri: https://exchange.hs-regensburg.de/api/v2.0/users/oth-app-veranstaltungen@exmail.hs-regensburg.de/calendarview
+  webuntis:
+    enabled: true
+    uri: https://kephiso.webuntis.com/WebUntis/jsonrpc.do?school=OTH-Regensburg
+    username: othappapi
+    password: WGckfqipujkYf4nHoeRr
+  jobmarket:
+    enabled: false
+    clientId: oth-R
+    clientKey: password
+server:
+  error:
+    include-stacktrace: never
+  forward-headers-strategy: native
+  tomcat:
+    mbeanregistry:
+      enabled: true
+  servlet:
+    encoding:
+      charset: UTF-8
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    urls:
+      - name: default
+        url: /openapi.yaml
+    disable-swagger-default-url: true
+    try-it-out-enabled: true
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/othapp
+    username: sa
+    password: password
+  servlet:
+    multipart:
+      enabled: true
+      # Threshold after which files are written to disk.
+      file-size-threshold: 2KB
+      max-file-size: 10MB
+      max-request-size: 30MB
+  devtools:
+    restart:
+      enabled: false
+  application:
+    name: oth-app
+  thymeleaf:
+    cache: true
+  mvc:
+    format:
+      date: yyyy-MM-dd
+# Don’t cache, it leads to problems in the swagger-ui
+#  web:
+#    resources:
+#      cache:
+#        period: 365d
+#        cachecontrol:
+#          max-age: 365d
+#      chain:
+#        strategy:
+#          content:
+#            enabled: true
+#            paths: /**
+#        enabled: true
+management:
+  endpoint:
+    health:
+      show-details: never
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus

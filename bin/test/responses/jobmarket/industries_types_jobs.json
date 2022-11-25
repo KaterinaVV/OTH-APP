@@ -1,0 +1,155 @@
+[
+  [
+    {
+      "Kat_ID": "1",
+      "Kat_Bezeichnung": "Abfallwirtschaft",
+      "Kat_Trennung": "0"
+    },
+    {
+      "Kat_ID": "2",
+      "Kat_Bezeichnung": "Anlagen- und Maschinenbau",
+      "Kat_Trennung": "0"
+    },
+    {
+      "Kat_ID": "141",
+      "Kat_Bezeichnung": "Automatisierungstechnik",
+      "Kat_Trennung": "0"
+    },
+    {
+      "Kat_ID": "140",
+      "Kat_Bezeichnung": "Automobilbau",
+      "Kat_Trennung": "0"
+    },
+    {
+      "Kat_ID": "3",
+      "Kat_Bezeichnung": "Banken, Versicherung, Immobilien, Finanzdienstleistung",
+      "Kat_Trennung": "0"
+    }
+  ],
+  [
+    {
+      "Jobtyp_ID": "9",
+      "Bezeichnung": "Praktikum im Studium",
+      "Hinweise": "Beachten Sie, dass <strong>nicht</strong> alle Firmen zum Praktikum zugelassen sind. Beantragen Sie ggf. die Zulassung beim Praxisbeauftragten Ihrer Fakultät."
+    },
+    {
+      "Jobtyp_ID": "7",
+      "Bezeichnung": "Bachelor- oder Masterarbeit",
+      "Hinweise": null
+    },
+    {
+      "Jobtyp_ID": "15",
+      "Bezeichnung": "Stellen für Doktoranden und Doktorandinnen",
+      "Hinweise": null
+    },
+    {
+      "Jobtyp_ID": "20",
+      "Bezeichnung": "Stellen für Duales Studium",
+      "Hinweise": null
+    },
+    {
+      "Jobtyp_ID": "10",
+      "Bezeichnung": "Werkstudierendentätigkeit",
+      "Hinweise": null
+    },
+    {
+      "Jobtyp_ID": "6",
+      "Bezeichnung": "Studentenjob",
+      "Hinweise": null
+    },
+    {
+      "Jobtyp_ID": "3",
+      "Bezeichnung": "Stelle für Absolventen und Absolventinnen",
+      "Hinweise": null
+    },
+    {
+      "Jobtyp_ID": "11",
+      "Bezeichnung": "Traineeprogramm",
+      "Hinweise": null
+    },
+    {
+      "Jobtyp_ID": "12",
+      "Bezeichnung": "Stelle, die erste Berufserfahrung voraussetzt",
+      "Hinweise": null
+    },
+    {
+      "Jobtyp_ID": "19",
+      "Bezeichnung": "Stellen für Studienabbrecher",
+      "Hinweise": "Bitte nehmen Sie Kontakt zu Ihrer Studienberatung auf, um alle Möglichkeiten an Ihrer Hochschule auszuloten."
+    }
+  ],
+  [
+    {
+      "Job_ID": "657837",
+      "Aktualitaetsdatum": "2020-07-06 16:31:11.333",
+      "Angebotstitel": "Diplomingenieur (FH) / Bachelor of Engineering / Bachelor of Science (m/w/d)",
+      "Prs_Firma": "Wasserwirtschaftsamt Bad Kissingen",
+      "Arbeitsort_lat": "50.200733700000001",
+      "Arbeitsort_lng": "10.080392",
+      "ExternSrc": null,
+      "country": "Deutschland",
+      "logoURL": "https://jobboerse.oth-regensburg.de/index.php/Logo/7c9cbbecfe19a9ede7d845d1046ae280.201616448623.jpeg",
+      "url": "https://jobboerse.oth-regensburg.de/index.php/job/657837-Diplomingenieur-FH-Bachelor-of-Engineering-Bachelor-of-Science-mwd-Wasserwirtschaftsamt-Bad-Kissingen"
+    },
+    {
+      "Job_ID": "657808",
+      "Aktualitaetsdatum": "2020-07-06 16:30:26.193",
+      "Angebotstitel": "Absolvent (m/w/d) Technische Gebäudeausrüstung mit Fokus HKLS",
+      "Prs_Firma": "Happold Ingenieurbüro GmbH",
+      "Arbeitsort_lat": "52.489444499999998",
+      "Arbeitsort_lng": "13.3220335",
+      "ExternSrc": null,
+      "country": "Deutschland",
+      "logoURL": "https://jobboerse.oth-regensburg.de/index.php/Logo/945d403f112cd12685378aaefbad0ff0.202018738656.jpeg",
+      "url": "https://jobboerse.oth-regensburg.de/index.php/job/657808-Absolvent-mwd-Technische-Geb%E4udeausr%FCstung-mit-Fokus-HKLS-Happold-Ingenieurb%FCro-GmbH"
+    },
+    {
+      "Job_ID": "657840",
+      "Aktualitaetsdatum": "2020-07-06 16:25:22.133",
+      "Angebotstitel": "Werkstudent (m/w/d) Social Media und Online Marketing",
+      "Prs_Firma": "Railpool GmbH",
+      "Arbeitsort_lat": "48.146149999999999",
+      "Arbeitsort_lng": "11.55785",
+      "ExternSrc": null,
+      "country": "Deutschland",
+      "logoURL": "https://jobboerse.oth-regensburg.de/index.php/Logo/05a7443b8ed8bbbd88bcae2ed8561c3e.202016752547.png",
+      "url": "https://jobboerse.oth-regensburg.de/index.php/job/657840-Werkstudent-mwd-Social-Media-und-Online-Marketing-Railpool-GmbH"
+    },
+    {
+      "Job_ID": "657815",
+      "Aktualitaetsdatum": "2020-07-06 16:24:52.450",
+      "Angebotstitel": "WERKSTUDENT EDITORIAL (m/w/d)",
+      "Prs_Firma": "Georg GmbH & Co. KG",
+      "Arbeitsort_lat": "48.135125299999999",
+      "Arbeitsort_lng": "11.5819805",
+      "ExternSrc": null,
+      "country": "Deutschland",
+      "logoURL": "https://jobboerse.oth-regensburg.de/index.php/Logo/acb91b22a4a0580050ac25e68eb20df9.202012648950.jpeg",
+      "url": "https://jobboerse.oth-regensburg.de/index.php/job/657815-WERKSTUDENT-EDITORIAL-mwd-Georg-GmbH-Co-KG"
+    },
+    {
+      "Job_ID": "657817",
+      "Aktualitaetsdatum": "2020-07-06 16:21:00.183",
+      "Angebotstitel": "Masterarbeit (m/w/d) Programmierung einer Android App zur Fernsteuerung von Smartphones im Testumfel",
+      "Prs_Firma": "Rohde & Schwarz GmbH & Co. KG",
+      "Arbeitsort_lat": "48.127594000000002",
+      "Arbeitsort_lng": "11.612283",
+      "ExternSrc": null,
+      "country": "Deutschland",
+      "logoURL": "https://jobboerse.oth-regensburg.de/index.php/Logo/ae63d6b3d240db3112d29de1bde72a8c.201124334822.jpeg",
+      "url": "https://jobboerse.oth-regensburg.de/index.php/job/657817-Masterarbeit-mwd-Programmierung-einer-Android-App-zur-Fernsteuerung-von-Smartphones-im-Testumfel-Rohde-Schwarz-GmbH-Co-KG"
+    },
+    {
+      "Job_ID": "657841",
+      "Aktualitaetsdatum": "2020-07-06 16:20:12.277",
+      "Angebotstitel": "Pflichtpraktikum Controlling (m/w/d)",
+      "Prs_Firma": "Schwan STABILO Cosmetics GmbH & Co. KG",
+      "Arbeitsort_lat": "49.544926400000001",
+      "Arbeitsort_lng": "11.1490797",
+      "ExternSrc": null,
+      "country": "Deutschland",
+      "logoURL": "https://jobboerse.oth-regensburg.de/index.php/Logo/f1178ff78a50fcb8de1f15d69a4c7c99.2019 2863366.jpeg",
+      "url": "https://jobboerse.oth-regensburg.de/index.php/job/657841-Pflichtpraktikum-Controlling-mwd-Schwan-STABILO-Cosmetics-GmbH-Co-KG"
+    }
+  ]
+]

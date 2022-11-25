@@ -1,0 +1,630 @@
+[30m2022-11-10 21:30:40,777[0;39m INFO [background-preinit]: HV000001: Hibernate Validator 6.1.6.Final
+[30m2022-11-10 21:30:40,793[0;39m INFO [Test worker]: Starting JobmarketUnavailableTest using Java 11.0.16 on ken-MacBook-Pro.local with PID 95446 (started by ken in /Users/ken/Documents/oth-app-server-master)
+[30m2022-11-10 21:30:40,793[0;39m INFO [Test worker]: The following profiles are active: test
+[30m2022-11-10 21:30:42,249[0;39m INFO [Test worker]: Tomcat initialized with port(s): 0 (http)
+[30m2022-11-10 21:30:42,371[0;39m INFO [Test worker]: Initializing ProtocolHandler ["http-nio-auto-1"]
+[30m2022-11-10 21:30:42,381[0;39m INFO [Test worker]: Starting service [Tomcat]
+[30m2022-11-10 21:30:42,381[0;39m INFO [Test worker]: Starting Servlet engine: [Apache Tomcat/9.0.41]
+[30m2022-11-10 21:30:42,473[0;39m INFO [Test worker]: Initializing Spring embedded WebApplicationContext
+[30m2022-11-10 21:30:42,473[0;39m INFO [Test worker]: Root WebApplicationContext: initialization completed in 1662 ms
+[30m2022-11-10 21:30:43,248[0;39m INFO [Test worker]: HikariPool-1 - Starting...
+[30m2022-11-10 21:30:43,310[0;39m INFO [Test worker]: Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[30m2022-11-10 21:30:44,029[0;39m INFO [Test worker]: Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[30m2022-11-10 21:30:44,030[0;39m INFO [Test worker]: Docker host IP address is localhost
+[30m2022-11-10 21:30:44,059[0;39m INFO [Test worker]: Connected to docker: 
+  Server Version: 20.10.17
+  API Version: 1.41
+  Operating System: Docker Desktop
+  Total Memory: 3933 MB
+[30m2022-11-10 21:30:44,062[0;39m INFO [Test worker]: Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[30m2022-11-10 21:30:44,209[0;39m INFO [Test worker]: Credential helper/store (docker-credential-desktop) does not have credentials for index.docker.io
+[30m2022-11-10 21:30:44,706[0;39m INFO [Test worker]: Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[30m2022-11-10 21:30:44,707[0;39m INFO [Test worker]: Checking the system...
+[30m2022-11-10 21:30:44,710[0;39m INFO [Test worker]: ✔︎ Docker server version should be at least 1.6.0
+[30m2022-11-10 21:30:44,809[0;39m INFO [Test worker]: ✔︎ Docker environment should have more than 2GB free disk space
+[30m2022-11-10 21:30:44,847[0;39m INFO [Test worker]: Creating container for image: postgres:13.2-alpine
+[30m2022-11-10 21:30:44,852[0;39m WARN [Test worker]: Reuse was requested but the environment does not support the reuse of containers
+To enable reuse of containers, you must set 'testcontainers.reuse.enable=true' in a file located at /Users/ken/.testcontainers.properties
+[30m2022-11-10 21:30:44,897[0;39m INFO [Test worker]: Starting container with ID: 3af263d54fe8905700cb2429956b12907fee8a980adfbf71ca2390893db900b9
+[30m2022-11-10 21:30:45,186[0;39m INFO [Test worker]: Container postgres:13.2-alpine is starting: 3af263d54fe8905700cb2429956b12907fee8a980adfbf71ca2390893db900b9
+[30m2022-11-10 21:30:46,366[0;39m INFO [Test worker]: Container postgres:13.2-alpine started in PT1.555768S
+[30m2022-11-10 21:30:46,495[0;39m INFO [Test worker]: HikariPool-1 - Start completed.
+[30m2022-11-10 21:30:47,416[0;39m INFO [Test worker]: 
+
+Using generated security password: 1efee273-917f-4ae6-8408-aee9f0fa634c
+
+[30m2022-11-10 21:30:47,487[0;39m INFO [Test worker]: Will secure Not [Or [Ant [pattern='/v1/candidates/**', POST], Ant [pattern='/v1/candidates/**', PUT], Ant [pattern='/v1/candidates/**', DELETE], Ant [pattern='/v1/election/**', POST], Ant [pattern='/v1/election/**', DELETE]]] with []
+[30m2022-11-10 21:30:47,530[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@568fb282, org.springframework.security.web.context.SecurityContextPersistenceFilter@58a0af0e, org.springframework.security.web.header.HeaderWriterFilter@3d33ae86, org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter@4b0699c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4571ce31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4be2be3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@338a7cd, org.springframework.security.web.session.SessionManagementFilter@f31ed81, org.springframework.security.web.access.ExceptionTranslationFilter@1d35243c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26890aba]
+[30m2022-11-10 21:30:47,546[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45409972, org.springframework.security.web.context.SecurityContextPersistenceFilter@1655a529, org.springframework.security.web.header.HeaderWriterFilter@9534400, org.springframework.security.web.csrf.CsrfFilter@5ccbef99, org.springframework.security.web.authentication.logout.LogoutFilter@9bb6e5f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22a9aa44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31499955, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@175bce13, org.springframework.security.web.session.SessionManagementFilter@42aa59c2, org.springframework.security.web.access.ExceptionTranslationFilter@a67c5f2]
+[30m2022-11-10 21:30:47,727[0;39m INFO [Test worker]: Initializing ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:30:47,854[0;39m INFO [Test worker]: Adding welcome page template: index
+[30m2022-11-10 21:30:48,563[0;39m INFO [Test worker]: Flyway Community Edition 7.1.1 by Redgate
+[30m2022-11-10 21:30:48,621[0;39m INFO [Test worker]: Database: jdbc:postgresql://localhost:55001/othapp (PostgreSQL 13.2)
+[30m2022-11-10 21:30:48,688[0;39m INFO [Test worker]: Successfully validated 10 migrations (execution time 00:00.033s)
+[30m2022-11-10 21:30:48,704[0;39m INFO [Test worker]: Creating Schema History table "public"."flyway_schema_history" ...
+[30m2022-11-10 21:30:48,742[0;39m INFO [Test worker]: Current version of schema "public": << Empty Schema >>
+[30m2022-11-10 21:30:48,748[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.1 - equipment"
+[30m2022-11-10 21:30:48,781[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.2 - eventcategory"
+[30m2022-11-10 21:30:48,824[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.3 - eventorganizer"
+[30m2022-11-10 21:30:48,860[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.4 - faculty"
+[30m2022-11-10 21:30:48,885[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.5 - feed"
+[30m2022-11-10 21:30:48,917[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.6 - room"
+[30m2022-11-10 21:30:48,966[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.7 - building"
+[30m2022-11-10 21:30:48,996[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.8 - building faculties"
+[30m2022-11-10 21:30:49,031[0;39m INFO [Test worker]: Migrating schema "public" to version "20210502.9 - building floors"
+[30m2022-11-10 21:30:49,086[0;39m INFO [Test worker]: Migrating schema "public" to version "20210514.1 - election newspaper"
+[30m2022-11-10 21:30:49,108[0;39m INFO [Test worker]: Successfully applied 10 migrations to schema "public" (execution time 00:00.376s)
+[30m2022-11-10 21:30:49,222[0;39m INFO [Test worker]: Initializing ExecutorService 'taskScheduler'
+[30m2022-11-10 21:30:49,230[0;39m INFO [Test worker]: Exposing 3 endpoint(s) beneath base path '/actuator'
+[30m2022-11-10 21:30:49,324[0;39m INFO [Test worker]: Starting ProtocolHandler ["http-nio-auto-1"]
+[30m2022-11-10 21:30:49,347[0;39m INFO [Test worker]: Tomcat started on port(s): 52369 (http) with context path ''
+[30m2022-11-10 21:30:49,361[0;39m INFO [Test worker]: Started JobmarketUnavailableTest in 8.903 seconds (JVM running for 11.987)
+[30m2022-11-10 21:30:49,466[0;39m INFO [http-nio-auto-1-exec-1]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+[30m2022-11-10 21:30:49,466[0;39m INFO [http-nio-auto-1-exec-1]: Initializing Servlet 'dispatcherServlet'
+[30m2022-11-10 21:30:49,467[0;39m INFO [http-nio-auto-1-exec-1]: Completed initialization in 1 ms
+[30m2022-11-10 21:30:49,635[0;39m ERROR [http-nio-auto-1-exec-1]: Failed to parse Jobmarket response ["ERROR"] for request JobMarketRequest(calls=[IndustryCategoryCall(id=1, lang='de'), JobTypesCall(), JobOffersCall(type=null, faculty=null, industry=null, text=null, location=null, radius=null, country=null, top=null)]).
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize instance of `java.util.ArrayList<de.oth.othappserver.jobmarket.JobMarketIndustry>` out of VALUE_STRING token
+ at [Source: (byte[])"["ERROR"]"; line: 1, column: 2]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1468)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1242)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1190)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.handleNonArray(CollectionDeserializer.java:336)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:269)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:249)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:26)
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:4497)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2799)
+	at de.oth.othappserver.jobmarket.ListJobMarketRequestResponse.parse(JobMarketRequests.kt:32)
+	at de.oth.othappserver.jobmarket.ListJobMarketRequestResponse.parse(JobMarketRequests.kt:28)
+	at de.oth.othappserver.jobmarket.JobMarketClient.executeBatch(JobMarketClient.kt:111)
+	at de.oth.othappserver.jobmarket.JobMarketService.jobmarket(JobMarketService.kt:68)
+	at de.oth.othappserver.jobmarket.JobMarketService$$FastClassBySpringCGLIB$$1d4410c6.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:54)
+	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:366)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:421)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at de.oth.othappserver.jobmarket.JobMarketService$$EnhancerBySpringCGLIB$$3be760bc.jobmarket(<generated>)
+	at de.oth.othappserver.rest.JobMarketController.jobmarket(JobMarketController.kt:61)
+	at de.oth.othappserver.rest.JobMarketController$$FastClassBySpringCGLIB$$a1fcae50.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at de.oth.othappserver.rest.JobMarketController$$EnhancerBySpringCGLIB$$9c82d40a.jobmarket(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at de.oth.othappserver.config.DelegatingApiRequestsLogger.doFilter(RequestLoggingFilterConfig.kt:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:204)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:764)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[30m2022-11-10 21:30:49,641[0;39m ERROR [http-nio-auto-1-exec-1]: Service Unavailable
+org.zalando.problem.DefaultProblem: Service Unavailable
+	at org.zalando.problem.ProblemBuilder.build(ProblemBuilder.java:83)
+	at de.oth.othappserver.exceptions.ProblemHandlingAdvice.handleThirdPartyProblem(ProblemHandlingAdvice.kt:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:424)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1321)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1132)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1078)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at de.oth.othappserver.config.DelegatingApiRequestsLogger.doFilter(RequestLoggingFilterConfig.kt:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:204)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:764)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: de.oth.othappserver.exceptions.JobmarketNotAvailable: Jobmarket Unavailable: Jobmarket currently unavailable. Try again later.
+	at de.oth.othappserver.jobmarket.JobMarketClient.handleError(JobMarketClient.kt:131)
+	at de.oth.othappserver.jobmarket.JobMarketClient.executeBatch(JobMarketClient.kt:118)
+	at de.oth.othappserver.jobmarket.JobMarketService.jobmarket(JobMarketService.kt:68)
+	at de.oth.othappserver.jobmarket.JobMarketService$$FastClassBySpringCGLIB$$1d4410c6.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:54)
+	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:366)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:421)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at de.oth.othappserver.jobmarket.JobMarketService$$EnhancerBySpringCGLIB$$3be760bc.jobmarket(<generated>)
+	at de.oth.othappserver.rest.JobMarketController.jobmarket(JobMarketController.kt:61)
+	at de.oth.othappserver.rest.JobMarketController$$FastClassBySpringCGLIB$$a1fcae50.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at de.oth.othappserver.rest.JobMarketController$$EnhancerBySpringCGLIB$$9c82d40a.jobmarket(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	... 60 common frames omitted
+[30m2022-11-10 21:30:49,752[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:30:49,755[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.jobmarket.JobMarketIntegrationTests
+[30m2022-11-10 21:30:49,756[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:30:49,757[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6f0ff377, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@b0885d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@69cadee3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@39fb948c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@29ff4c8f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2d89cb8d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@128b3519, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@77319c30, org.springframework.test.context.event.EventPublishingTestExecutionListener@24f92d6d, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@474f4fdc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@c2789d1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@778c5479, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a739da0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@27ff109d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@17267cb2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@29cddb3]
+[30m2022-11-10 21:30:49,784[0;39m INFO [Test worker]: Starting JobMarketIntegrationTests using Java 11.0.16 on ken-MacBook-Pro.local with PID 95446 (started by ken in /Users/ken/Documents/oth-app-server-master)
+[30m2022-11-10 21:30:49,784[0;39m INFO [Test worker]: The following profiles are active: test
+[30m2022-11-10 21:30:50,076[0;39m INFO [Test worker]: Tomcat initialized with port(s): 0 (http)
+[30m2022-11-10 21:30:50,076[0;39m INFO [Test worker]: Initializing ProtocolHandler ["http-nio-auto-2"]
+[30m2022-11-10 21:30:50,077[0;39m INFO [Test worker]: Starting service [Tomcat]
+[30m2022-11-10 21:30:50,077[0;39m INFO [Test worker]: Starting Servlet engine: [Apache Tomcat/9.0.41]
+[30m2022-11-10 21:30:50,088[0;39m INFO [Test worker]: Initializing Spring embedded WebApplicationContext
+[30m2022-11-10 21:30:50,088[0;39m INFO [Test worker]: Root WebApplicationContext: initialization completed in 302 ms
+[30m2022-11-10 21:30:50,316[0;39m INFO [Test worker]: HikariPool-2 - Starting...
+[30m2022-11-10 21:30:50,354[0;39m INFO [Test worker]: HikariPool-2 - Start completed.
+[30m2022-11-10 21:30:50,532[0;39m INFO [Test worker]: 
+
+Using generated security password: 36c91bed-30ae-4aac-877d-198ada8dfbd2
+
+[30m2022-11-10 21:30:50,537[0;39m INFO [Test worker]: Will secure Not [Or [Ant [pattern='/v1/candidates/**', POST], Ant [pattern='/v1/candidates/**', PUT], Ant [pattern='/v1/candidates/**', DELETE], Ant [pattern='/v1/election/**', POST], Ant [pattern='/v1/election/**', DELETE]]] with []
+[30m2022-11-10 21:30:50,561[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44f0dc0f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bed5cde, org.springframework.security.web.header.HeaderWriterFilter@171d998f, org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter@2b501300, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d088a1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56a2afd0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24e7ae27, org.springframework.security.web.session.SessionManagementFilter@6d4dfd02, org.springframework.security.web.access.ExceptionTranslationFilter@18e3d00c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3fe184bd]
+[30m2022-11-10 21:30:50,569[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50d416cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@510c2bc5, org.springframework.security.web.header.HeaderWriterFilter@3099f628, org.springframework.security.web.csrf.CsrfFilter@672e7aed, org.springframework.security.web.authentication.logout.LogoutFilter@7071002d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@742a85f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@bfd05e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33e59b7a, org.springframework.security.web.session.SessionManagementFilter@45e1c886, org.springframework.security.web.access.ExceptionTranslationFilter@70baa730]
+[30m2022-11-10 21:30:50,643[0;39m INFO [Test worker]: Initializing ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:30:50,681[0;39m INFO [Test worker]: Adding welcome page template: index
+[30m2022-11-10 21:30:50,969[0;39m INFO [Test worker]: Flyway Community Edition 7.1.1 by Redgate
+[30m2022-11-10 21:30:50,977[0;39m INFO [Test worker]: Database: jdbc:postgresql://localhost:55001/othapp (PostgreSQL 13.2)
+[30m2022-11-10 21:30:51,008[0;39m INFO [Test worker]: Successfully validated 10 migrations (execution time 00:00.018s)
+[30m2022-11-10 21:30:51,019[0;39m INFO [Test worker]: Current version of schema "public": 20210514.1
+[30m2022-11-10 21:30:51,020[0;39m INFO [Test worker]: Schema "public" is up to date. No migration necessary.
+[30m2022-11-10 21:30:51,093[0;39m INFO [Test worker]: Initializing ExecutorService 'taskScheduler'
+[30m2022-11-10 21:30:51,099[0;39m INFO [Test worker]: Exposing 3 endpoint(s) beneath base path '/actuator'
+[30m2022-11-10 21:30:51,146[0;39m INFO [Test worker]: Starting ProtocolHandler ["http-nio-auto-2"]
+[30m2022-11-10 21:30:51,147[0;39m INFO [Test worker]: Tomcat started on port(s): 52381 (http) with context path ''
+[30m2022-11-10 21:30:51,150[0;39m INFO [Test worker]: Started JobMarketIntegrationTests in 1.389 seconds (JVM running for 13.777)
+[30m2022-11-10 21:30:51,176[0;39m INFO [http-nio-auto-2-exec-1]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+[30m2022-11-10 21:30:51,176[0;39m INFO [http-nio-auto-2-exec-1]: Initializing Servlet 'dispatcherServlet'
+[30m2022-11-10 21:30:51,176[0;39m INFO [http-nio-auto-2-exec-1]: Completed initialization in 0 ms
+[30m2022-11-10 21:30:51,485[0;39m INFO [Test worker]: 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.14.4
+                                      
+[30m2022-11-10 21:30:51,712[0;39m INFO [Test worker]: Authenticating for WebUntis session.
+[30m2022-11-10 21:30:51,728[0;39m INFO [Test worker]: Successfully authenticated.
+[30m2022-11-10 21:30:51,730[0;39m INFO [Test worker]: Authenticating for WebUntis session.
+[30m2022-11-10 21:30:51,732[0;39m INFO [Test worker]: Successfully authenticated.
+[30m2022-11-10 21:30:51,740[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:30:51,750[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.webuntis.WebUntisAuthTest
+[30m2022-11-10 21:30:51,752[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:30:51,752[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@64c9105e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3142b1df, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3f456976, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2cf86b9a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1fc5bb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2477502e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30ed830f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5fa68a33, org.springframework.test.context.event.EventPublishingTestExecutionListener@21eaae61, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3f827c52, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@63ab6556, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@8378c02, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7cdab2c3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@501631e6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@68af7f67, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5c4ca9ec]
+[30m2022-11-10 21:30:51,773[0;39m INFO [Test worker]: Starting WebUntisAuthTest using Java 11.0.16 on ken-MacBook-Pro.local with PID 95446 (started by ken in /Users/ken/Documents/oth-app-server-master)
+[30m2022-11-10 21:30:51,773[0;39m INFO [Test worker]: The following profiles are active: test
+[30m2022-11-10 21:30:52,161[0;39m INFO [Test worker]: Tomcat initialized with port(s): 0 (http)
+[30m2022-11-10 21:30:52,161[0;39m INFO [Test worker]: Initializing ProtocolHandler ["http-nio-auto-3"]
+[30m2022-11-10 21:30:52,162[0;39m INFO [Test worker]: Starting service [Tomcat]
+[30m2022-11-10 21:30:52,162[0;39m INFO [Test worker]: Starting Servlet engine: [Apache Tomcat/9.0.41]
+[30m2022-11-10 21:30:52,172[0;39m INFO [Test worker]: Initializing Spring embedded WebApplicationContext
+[30m2022-11-10 21:30:52,173[0;39m INFO [Test worker]: Root WebApplicationContext: initialization completed in 399 ms
+[30m2022-11-10 21:30:52,710[0;39m INFO [Test worker]: HikariPool-3 - Starting...
+[30m2022-11-10 21:30:52,778[0;39m INFO [Test worker]: HikariPool-3 - Start completed.
+[30m2022-11-10 21:30:52,980[0;39m INFO [Test worker]: 
+
+Using generated security password: aabad749-8990-45e5-a327-c39148b8ae43
+
+[30m2022-11-10 21:30:52,988[0;39m INFO [Test worker]: Will secure Not [Or [Ant [pattern='/v1/candidates/**', POST], Ant [pattern='/v1/candidates/**', PUT], Ant [pattern='/v1/candidates/**', DELETE], Ant [pattern='/v1/election/**', POST], Ant [pattern='/v1/election/**', DELETE]]] with []
+[30m2022-11-10 21:30:53,021[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7447a8b9, org.springframework.security.web.context.SecurityContextPersistenceFilter@13576bee, org.springframework.security.web.header.HeaderWriterFilter@764950ff, org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter@570da936, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1318d48b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2feab0bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68621fce, org.springframework.security.web.session.SessionManagementFilter@48e3ec15, org.springframework.security.web.access.ExceptionTranslationFilter@40981afd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f6273ac]
+[30m2022-11-10 21:30:53,030[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@caa121f, org.springframework.security.web.context.SecurityContextPersistenceFilter@42ba8641, org.springframework.security.web.header.HeaderWriterFilter@1debb707, org.springframework.security.web.csrf.CsrfFilter@f2025eb, org.springframework.security.web.authentication.logout.LogoutFilter@4e16d10b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bd924e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b4ae911, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10b470fa, org.springframework.security.web.session.SessionManagementFilter@4cbbed40, org.springframework.security.web.access.ExceptionTranslationFilter@4a9b064]
+[30m2022-11-10 21:30:53,235[0;39m INFO [Test worker]: Initializing ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:30:53,309[0;39m INFO [Test worker]: Adding welcome page template: index
+[30m2022-11-10 21:30:53,711[0;39m INFO [Test worker]: Flyway Community Edition 7.1.1 by Redgate
+[30m2022-11-10 21:30:53,738[0;39m INFO [Test worker]: Database: jdbc:postgresql://localhost:55001/othapp (PostgreSQL 13.2)
+[30m2022-11-10 21:30:53,796[0;39m INFO [Test worker]: Successfully validated 10 migrations (execution time 00:00.029s)
+[30m2022-11-10 21:30:53,820[0;39m INFO [Test worker]: Current version of schema "public": 20210514.1
+[30m2022-11-10 21:30:53,823[0;39m INFO [Test worker]: Schema "public" is up to date. No migration necessary.
+[30m2022-11-10 21:30:53,971[0;39m INFO [Test worker]: Initializing ExecutorService 'taskScheduler'
+[30m2022-11-10 21:30:53,994[0;39m INFO [Test worker]: Exposing 3 endpoint(s) beneath base path '/actuator'
+[30m2022-11-10 21:30:54,079[0;39m INFO [Test worker]: Starting ProtocolHandler ["http-nio-auto-3"]
+[30m2022-11-10 21:30:54,082[0;39m INFO [Test worker]: Tomcat started on port(s): 52396 (http) with context path ''
+[30m2022-11-10 21:30:54,086[0;39m INFO [Test worker]: Started WebUntisAuthTest in 2.333 seconds (JVM running for 16.713)
+[30m2022-11-10 21:30:54,207[0;39m INFO [http-nio-auto-3-exec-1]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+[30m2022-11-10 21:30:54,208[0;39m INFO [http-nio-auto-3-exec-1]: Initializing Servlet 'dispatcherServlet'
+[30m2022-11-10 21:30:54,208[0;39m INFO [http-nio-auto-3-exec-1]: Completed initialization in 0 ms
+[30m2022-11-10 21:30:54,387[0;39m INFO [DefaultDispatcher-worker-3 @coroutine#2]: Authenticating for WebUntis session.
+[30m2022-11-10 21:30:54,398[0;39m INFO [DefaultDispatcher-worker-3 @coroutine#2]: Successfully authenticated.
+[30m2022-11-10 21:30:54,717[0;39m INFO [Test worker]: Neither @ContextConfiguration nor @ContextHierarchy found for test class [de.oth.othappserver.webuntis.WebuntisUnavailableTest], using SpringBootContextLoader
+[30m2022-11-10 21:30:54,719[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.webuntis.WebuntisUnavailableTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:30:54,719[0;39m INFO [Test worker]: Could not detect default configuration classes for test class [de.oth.othappserver.webuntis.WebuntisUnavailableTest]: WebuntisUnavailableTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[30m2022-11-10 21:30:54,722[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.webuntis.WebuntisUnavailableTest
+[30m2022-11-10 21:30:54,723[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:30:54,726[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6bc14357, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@285c20e3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5c2bdb94, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@400dc662, org.springframework.test.context.support.DirtiesContextTestExecutionListener@21b7fecf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@68a58922, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6a5018d9, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@44c0ed27, org.springframework.test.context.event.EventPublishingTestExecutionListener@5a9f22f6, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1eb75c1e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@744b09c1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@37a16bba, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@148a672a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@30f99e09, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1c509cd6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2010c85d]
+[30m2022-11-10 21:30:54,800[0;39m INFO [Test worker]: Shutting down ExecutorService 'taskScheduler'
+[30m2022-11-10 21:30:54,804[0;39m INFO [Test worker]: Shutting down ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:30:54,811[0;39m INFO [Test worker]: HikariPool-1 - Shutdown initiated...
+[30m2022-11-10 21:30:54,823[0;39m INFO [Test worker]: HikariPool-1 - Shutdown completed.
+[30m2022-11-10 21:30:54,908[0;39m INFO [Test worker]: Starting WebuntisUnavailableTest using Java 11.0.16 on ken-MacBook-Pro.local with PID 95446 (started by ken in /Users/ken/Documents/oth-app-server-master)
+[30m2022-11-10 21:30:54,909[0;39m INFO [Test worker]: The following profiles are active: test
+[30m2022-11-10 21:30:55,430[0;39m INFO [Test worker]: Tomcat initialized with port(s): 0 (http)
+[30m2022-11-10 21:30:55,458[0;39m INFO [Test worker]: Initializing ProtocolHandler ["http-nio-auto-4"]
+[30m2022-11-10 21:30:55,458[0;39m INFO [Test worker]: Starting service [Tomcat]
+[30m2022-11-10 21:30:55,458[0;39m INFO [Test worker]: Starting Servlet engine: [Apache Tomcat/9.0.41]
+[30m2022-11-10 21:30:55,478[0;39m INFO [Test worker]: Initializing Spring embedded WebApplicationContext
+[30m2022-11-10 21:30:55,478[0;39m INFO [Test worker]: Root WebApplicationContext: initialization completed in 566 ms
+[30m2022-11-10 21:30:55,859[0;39m INFO [Test worker]: HikariPool-4 - Starting...
+[30m2022-11-10 21:30:55,963[0;39m INFO [Test worker]: HikariPool-4 - Start completed.
+[30m2022-11-10 21:30:56,727[0;39m INFO [Test worker]: 
+
+Using generated security password: b803a288-d592-4b30-b447-d8ace42f68e3
+
+[30m2022-11-10 21:30:56,748[0;39m INFO [Test worker]: Will secure Not [Or [Ant [pattern='/v1/candidates/**', POST], Ant [pattern='/v1/candidates/**', PUT], Ant [pattern='/v1/candidates/**', DELETE], Ant [pattern='/v1/election/**', POST], Ant [pattern='/v1/election/**', DELETE]]] with []
+[30m2022-11-10 21:30:56,842[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@690a6d1c, org.springframework.security.web.context.SecurityContextPersistenceFilter@531991eb, org.springframework.security.web.header.HeaderWriterFilter@a3a119c, org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter@5d617a92, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74827b59, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2eee22a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7142e6a8, org.springframework.security.web.session.SessionManagementFilter@3ae76e20, org.springframework.security.web.access.ExceptionTranslationFilter@429cb40d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@86b8b41]
+[30m2022-11-10 21:30:56,874[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49ff439e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ac99190, org.springframework.security.web.header.HeaderWriterFilter@52716456, org.springframework.security.web.csrf.CsrfFilter@2f0d25cd, org.springframework.security.web.authentication.logout.LogoutFilter@6559131, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32dfa752, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b55368b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bdcc544, org.springframework.security.web.session.SessionManagementFilter@7cacf085, org.springframework.security.web.access.ExceptionTranslationFilter@30e70f34]
+[30m2022-11-10 21:30:57,135[0;39m INFO [Test worker]: Initializing ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:30:57,247[0;39m INFO [Test worker]: Adding welcome page template: index
+[30m2022-11-10 21:30:57,704[0;39m INFO [Test worker]: Flyway Community Edition 7.1.1 by Redgate
+[30m2022-11-10 21:30:57,718[0;39m INFO [Test worker]: Database: jdbc:postgresql://localhost:55001/othapp (PostgreSQL 13.2)
+[30m2022-11-10 21:30:57,756[0;39m INFO [Test worker]: Successfully validated 10 migrations (execution time 00:00.013s)
+[30m2022-11-10 21:30:57,767[0;39m INFO [Test worker]: Current version of schema "public": 20210514.1
+[30m2022-11-10 21:30:57,768[0;39m INFO [Test worker]: Schema "public" is up to date. No migration necessary.
+[30m2022-11-10 21:30:57,852[0;39m INFO [Test worker]: Initializing ExecutorService 'taskScheduler'
+[30m2022-11-10 21:30:57,859[0;39m INFO [Test worker]: Exposing 3 endpoint(s) beneath base path '/actuator'
+[30m2022-11-10 21:30:57,899[0;39m INFO [Test worker]: Starting ProtocolHandler ["http-nio-auto-4"]
+[30m2022-11-10 21:30:57,900[0;39m INFO [Test worker]: Tomcat started on port(s): 52414 (http) with context path ''
+[30m2022-11-10 21:30:57,908[0;39m INFO [Test worker]: Started WebuntisUnavailableTest in 3.078 seconds (JVM running for 20.534)
+[30m2022-11-10 21:30:57,946[0;39m INFO [http-nio-auto-4-exec-1]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+[30m2022-11-10 21:30:57,946[0;39m INFO [http-nio-auto-4-exec-1]: Initializing Servlet 'dispatcherServlet'
+[30m2022-11-10 21:30:57,947[0;39m INFO [http-nio-auto-4-exec-1]: Completed initialization in 1 ms
+[30m2022-11-10 21:30:57,968[0;39m ERROR [DefaultDispatcher-worker-2 @coroutine#5]: Webuntis returned 302 Found.
+[30m2022-11-10 21:30:57,968[0;39m ERROR [DefaultDispatcher-worker-5 @coroutine#6]: Webuntis returned 302 Found.
+[30m2022-11-10 21:30:58,032[0;39m ERROR [DefaultDispatcher-worker-5 @coroutine#9]: Webuntis returned 302 Found.
+[30m2022-11-10 21:30:58,032[0;39m ERROR [DefaultDispatcher-worker-4 @coroutine#8]: Webuntis returned 302 Found.
+[30m2022-11-10 21:30:58,081[0;39m ERROR [http-nio-auto-4-exec-3]: Webuntis returned 302 Found.
+[30m2022-11-10 21:30:58,082[0;39m ERROR [http-nio-auto-4-exec-3]: Service Unavailable
+org.zalando.problem.DefaultProblem: Service Unavailable
+	at org.zalando.problem.ProblemBuilder.build(ProblemBuilder.java:83)
+	at de.oth.othappserver.exceptions.ProblemHandlingAdvice.handleThirdPartyProblem(ProblemHandlingAdvice.kt:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:424)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:141)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1321)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1132)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1078)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at de.oth.othappserver.config.DelegatingApiRequestsLogger.doFilter(RequestLoggingFilterConfig.kt:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:204)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:764)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: de.oth.othappserver.exceptions.WebuntisNotAvailable: WebUntis Unavailable: WebUntis currently unavailable. Try again later.
+	at de.oth.othappserver.webuntis.WebUntisClient.execute(WebUntisClient.kt:117)
+	at de.oth.othappserver.webuntis.WebUntisClient.executeWithArrayResult(WebUntisClient.kt:97)
+	at de.oth.othappserver.webuntis.WebUntisClient.getAll(WebUntisClient.kt:46)
+	at de.oth.othappserver.webuntis.WebUntisService.getRooms(WebUntisService.kt:52)
+	at de.oth.othappserver.webuntis.WebUntisService$$FastClassBySpringCGLIB$$d39d2a3c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:54)
+	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:366)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:421)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at de.oth.othappserver.webuntis.WebUntisService$$EnhancerBySpringCGLIB$$d89b46de.getRooms(<generated>)
+	at de.oth.othappserver.rest.UniversityController.rooms(UniversityController.kt:57)
+	at de.oth.othappserver.rest.UniversityController$$FastClassBySpringCGLIB$$5e0790af.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at de.oth.othappserver.rest.UniversityController$$EnhancerBySpringCGLIB$$3c386e87_4.rooms(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	... 60 common frames omitted
+[30m2022-11-10 21:30:58,092[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:30:58,093[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.webuntis.UniversityApiTests
+[30m2022-11-10 21:30:58,094[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:30:58,096[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3a439892, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1bae004d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@34a5f346, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2139e51a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7186ea7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c5fba61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@777b4b6f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@198461af, org.springframework.test.context.event.EventPublishingTestExecutionListener@5dad496e, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@4cb06c08, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@613d76c2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5b0efa53, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6c5f2e65, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2340cfca, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@29c12606, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5319d0f]
+[30m2022-11-10 21:30:58,178[0;39m INFO [Test worker]: Neither @ContextConfiguration nor @ContextHierarchy found for test class [de.oth.othappserver.OthAppServerApplicationTests], using SpringBootContextLoader
+[30m2022-11-10 21:30:58,179[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.OthAppServerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:30:58,179[0;39m INFO [Test worker]: Could not detect default configuration classes for test class [de.oth.othappserver.OthAppServerApplicationTests]: OthAppServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[30m2022-11-10 21:30:58,182[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.OthAppServerApplicationTests
+[30m2022-11-10 21:30:58,183[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:30:58,183[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f5aed31, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4060a417, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@19e26704, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@50e1151d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@585a4955, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ddf0e55, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@170f90ad, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4f1e26ac, org.springframework.test.context.event.EventPublishingTestExecutionListener@4504defb, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@204cdda8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4badbbf4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7538cf6b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@16a83431, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@50cf0ad1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@761b7927, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@45eba318]
+[30m2022-11-10 21:30:58,207[0;39m INFO [Test worker]: Starting OthAppServerApplicationTests using Java 11.0.16 on ken-MacBook-Pro.local with PID 95446 (started by ken in /Users/ken/Documents/oth-app-server-master)
+[30m2022-11-10 21:30:58,207[0;39m INFO [Test worker]: The following profiles are active: test
+[30m2022-11-10 21:30:58,651[0;39m INFO [Test worker]: HikariPool-5 - Starting...
+[30m2022-11-10 21:30:58,697[0;39m INFO [Test worker]: HikariPool-5 - Start completed.
+[30m2022-11-10 21:30:58,875[0;39m INFO [Test worker]: 
+
+Using generated security password: c592efce-cac2-4b37-a32a-d2b36e85afe8
+
+[30m2022-11-10 21:30:58,881[0;39m INFO [Test worker]: Will secure Not [Or [Ant [pattern='/v1/candidates/**', POST], Ant [pattern='/v1/candidates/**', PUT], Ant [pattern='/v1/candidates/**', DELETE], Ant [pattern='/v1/election/**', POST], Ant [pattern='/v1/election/**', DELETE]]] with []
+[30m2022-11-10 21:30:58,911[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f8b246a, org.springframework.security.web.context.SecurityContextPersistenceFilter@10f3ad89, org.springframework.security.web.header.HeaderWriterFilter@7e42634f, org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter@5757ae0f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b06dce0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@363394d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@136cb2ee, org.springframework.security.web.session.SessionManagementFilter@15e40913, org.springframework.security.web.access.ExceptionTranslationFilter@73570d2a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@490b54f4]
+[30m2022-11-10 21:30:58,939[0;39m INFO [Test worker]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e6281a7, org.springframework.security.web.context.SecurityContextPersistenceFilter@7534416a, org.springframework.security.web.header.HeaderWriterFilter@6a431032, org.springframework.security.web.csrf.CsrfFilter@5afdf13b, org.springframework.security.web.authentication.logout.LogoutFilter@55a2f7ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@184467ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6af43654, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@256f5ca9, org.springframework.security.web.session.SessionManagementFilter@40750476, org.springframework.security.web.access.ExceptionTranslationFilter@45f51d07]
+[30m2022-11-10 21:30:59,096[0;39m INFO [Test worker]: Initializing ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:30:59,129[0;39m INFO [Test worker]: Adding welcome page template: index
+[30m2022-11-10 21:30:59,351[0;39m INFO [Test worker]: Flyway Community Edition 7.1.1 by Redgate
+[30m2022-11-10 21:30:59,361[0;39m INFO [Test worker]: Database: jdbc:postgresql://localhost:55001/othapp (PostgreSQL 13.2)
+[30m2022-11-10 21:30:59,407[0;39m INFO [Test worker]: Successfully validated 10 migrations (execution time 00:00.023s)
+[30m2022-11-10 21:30:59,428[0;39m INFO [Test worker]: Current version of schema "public": 20210514.1
+[30m2022-11-10 21:30:59,432[0;39m INFO [Test worker]: Schema "public" is up to date. No migration necessary.
+[30m2022-11-10 21:30:59,530[0;39m INFO [Test worker]: Initializing ExecutorService 'taskScheduler'
+[30m2022-11-10 21:30:59,541[0;39m INFO [Test worker]: Exposing 3 endpoint(s) beneath base path '/actuator'
+[30m2022-11-10 21:30:59,581[0;39m INFO [Test worker]: Started OthAppServerApplicationTests in 1.393 seconds (JVM running for 22.207)
+[30m2022-11-10 21:31:00,020[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:31:00,032[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.rest.EventCalendarControllerTest
+[30m2022-11-10 21:31:00,034[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:31:00,034[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@395efcf5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@147bdad5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4b1c6ff8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70d29671, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3ea565ca, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7442bdb9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5c897f66, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@388c1b98, org.springframework.test.context.event.EventPublishingTestExecutionListener@2d12b276, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@4cdc7d18, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b3959aa, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3b1d98e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3b084a8c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1413d448, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5763b69, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@806efe0]
+[30m2022-11-10 21:31:00,329[0;39m WARN [http-nio-auto-2-exec-5]: Bad Request: Bad Request: maxStartDate has to be after minStartDate.
+[30m2022-11-10 21:31:00,354[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:31:00,355[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.rest.RoomFinderControllerTest
+[30m2022-11-10 21:31:00,355[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:31:00,356[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2d2b02a3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6c92c190, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@40cc4698, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6dfcbd59, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1837945f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@62d35888, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@40893acc, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@481751f1, org.springframework.test.context.event.EventPublishingTestExecutionListener@6ca6b1c0, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@14c9a3c4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1d9fb4cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6f75e650, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@368462cf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6f8a3058, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@fd3f88e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4fd4c842]
+[30m2022-11-10 21:31:00,517[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:31:00,517[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.rest.FacultyControllerTests
+[30m2022-11-10 21:31:00,518[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:31:00,518[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4c9acf45, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4474081c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1bfc0a62, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@556e2fec, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f1422e3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2bc4e7f5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@501057f5, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@74250354, org.springframework.test.context.event.EventPublishingTestExecutionListener@1a483409, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@16bf83fa, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@44c2d127, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@18a15548, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4312d229, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@295839e2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7bc19e07, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@69589f22]
+[30m2022-11-10 21:31:00,559[0;39m WARN [http-nio-auto-3-exec-3]: Not Found: Not Found: Faculty 'INVALID' not found.
+[30m2022-11-10 21:31:00,576[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:31:00,577[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.rest.TimetableControllerTest
+[30m2022-11-10 21:31:00,577[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:31:00,578[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4dec71ac, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4addfa6d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@15fedc57, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3074d6ed, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e3bb05e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b103f66, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@586f5037, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4eba3669, org.springframework.test.context.event.EventPublishingTestExecutionListener@d40d6a0, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@37912361, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@15dd334c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@acb46e0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1b564cf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3f01d5b3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@43bad64c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1316649d]
+[30m2022-11-10 21:31:00,660[0;39m INFO [Test worker]: Could not detect default resource locations for test class [de.oth.othappserver.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[30m2022-11-10 21:31:00,661[0;39m INFO [Test worker]: Found @SpringBootConfiguration de.oth.othappserver.OthAppServerApplication for test class de.oth.othappserver.rest.UniversityControllerTest
+[30m2022-11-10 21:31:00,662[0;39m INFO [Test worker]: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[30m2022-11-10 21:31:00,662[0;39m INFO [Test worker]: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31fd8dc0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3031513d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3f85dd92, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@9d36367, org.springframework.test.context.support.DirtiesContextTestExecutionListener@549d7c10, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6e9f6707, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7f674e0b, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6d3dc2db, org.springframework.test.context.event.EventPublishingTestExecutionListener@527f4e90, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@474dbc87, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@29fa573, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13794e1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@29944199, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@39769a8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7cdcf094, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4171f372]
+[30m2022-11-10 21:31:00,695[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'taskScheduler'
+[30m2022-11-10 21:31:00,699[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:31:00,701[0;39m INFO [SpringContextShutdownHook]: HikariPool-5 - Shutdown initiated...
+[30m2022-11-10 21:31:00,708[0;39m INFO [SpringContextShutdownHook]: HikariPool-5 - Shutdown completed.
+[30m2022-11-10 21:31:00,968[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'taskScheduler'
+[30m2022-11-10 21:31:00,968[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'taskScheduler'
+[30m2022-11-10 21:31:00,969[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'taskScheduler'
+[30m2022-11-10 21:31:00,970[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:31:00,970[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:31:00,970[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'applicationTaskExecutor'
+[30m2022-11-10 21:31:00,974[0;39m INFO [SpringContextShutdownHook]: HikariPool-3 - Shutdown initiated...
+[30m2022-11-10 21:31:00,973[0;39m INFO [SpringContextShutdownHook]: HikariPool-4 - Shutdown initiated...
+[30m2022-11-10 21:31:00,974[0;39m INFO [SpringContextShutdownHook]: HikariPool-2 - Shutdown initiated...
+[30m2022-11-10 21:31:00,975[0;39m INFO [SpringContextShutdownHook]: HikariPool-3 - Shutdown completed.
+[30m2022-11-10 21:31:00,977[0;39m INFO [SpringContextShutdownHook]: HikariPool-4 - Shutdown completed.
+[30m2022-11-10 21:31:00,977[0;39m INFO [SpringContextShutdownHook]: HikariPool-2 - Shutdown completed.

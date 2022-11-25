@@ -1,0 +1,31 @@
+{
+  "@odata.context": "...",
+  "value": [
+    {
+      "Id": "S0me Id-with_SpecialSigns=andNumbers=",
+      "Type": "SingleInstance",
+      "Categories": ["Party"],
+      "OriginalStartTimeZone": "W. Europe Standard Time",
+      "OriginalEndTimeZone": "W. Europe Standard Time",
+      "Subject": "Subject",
+      "IsAllDay": false,
+      "Body": {
+        "ContentType": "HTML",
+        "Content": "<p>#Max Mustermann</p>\n<p>#This is ignored</p>"
+      },
+      "Start": {
+        "DateTime": "2019-10-11T14:00:00.0000000",
+        "TimeZone": "UTC"
+      },
+      "End": {
+        "DateTime": "2019-10-11T15:00:00.0000000",
+        "TimeZone": "UTC"
+      },
+      "Location": {
+        "DisplayName": "K002"
+      },
+      "Recurrence": null
+    }
+  ],
+  "@odata.deltaLink": "https://exchange.hs-regensburg.de/api/v2.0/me/calendarview/?startDateTime=xxxZ&endDateTime=xxx&%24deltatoken=5z4RBJYliDxifH5LvVf213oEke0AACv9M1EBAAAA"
+}

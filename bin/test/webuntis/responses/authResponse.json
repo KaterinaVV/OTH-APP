@@ -1,0 +1,10 @@
+{
+  "jsonrpc": "2.0",
+  "id": "123",
+  "result": {
+    "sessionId": "SESSION",
+    "personType": 5,
+    "personId": 123,
+    "klasseId": 8198
+  }
+}

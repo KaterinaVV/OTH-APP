@@ -1,0 +1,41 @@
+{
+  "bundles": [
+    {
+      "bundleName": "apache2",
+      "licenseName": "Apache License, Version 2.0",
+      "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "bundleName": "edl1",
+      "licenseName": "Eclipse Distribution License - v 1.0",
+      "licenseUrl": "https://www.eclipse.org/org/documents/edl-v10.php"
+    },
+    {
+      "bundleName": "epl2",
+      "licenseName": "Eclipse Public License - v 2.0",
+      "licenseUrl": "https://www.eclipse.org/legal/epl-2.0/"
+    }
+  ],
+  "transformationRules": [
+    {
+      "bundleName": "apache2",
+      "licenseNamePattern": "The Apache Software License, Version 2.0"
+    },
+    {
+      "bundleName": "apache2",
+      "licenseNamePattern": "Apache License, Version 2.0"
+    },
+    {
+      "bundleName": "edl1",
+      "licenseNamePattern": "EDL 1.0"
+    },
+    {
+      "bundleName": "epl2",
+      "licenseNamePattern": "Eclipse Public License - v 2.0"
+    },
+    {
+      "bundleName": "epl2",
+      "licenseNamePattern": "EPL 2.0"
+    }
+  ]
+}

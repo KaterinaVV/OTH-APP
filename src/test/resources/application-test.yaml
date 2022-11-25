@@ -1,0 +1,35 @@
+server:
+  error:
+    include-stacktrace: never
+    include-message: always
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:13.2-alpine://localhost:5432/othapp?TC_REUSABLE=true
+    username: sa
+    password: password
+  thymeleaf:
+    cache: true
+  resources:
+    cache:
+      period: 31536000
+      cachecontrol:
+        max-age: 31536000
+    chain:
+      html-application-cache: true
+      enabled: true
+      strategy:
+        content:
+          enabled: true
+app:
+  exchange:
+    username: Testuser
+    password: Testuser
+    uri: http://exchange.test
+  webuntis:
+    username: Test
+    password: password
+    enabled: true
+  jobmarket:
+    enabled: true
+    clientId: id
+    clientKey: key

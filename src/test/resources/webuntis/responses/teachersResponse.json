@@ -1,0 +1,31 @@
+{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "result": [
+    {
+      "id": 2064,
+      "name": "Aisch",
+      "foreName": "Christoph",
+      "longName": "Aisch",
+      "title": "LfbA",
+      "active": true,
+      "dids": [
+        {
+          "id": 2
+        }
+      ]
+    }, {
+      "id": 3785,
+      "name": "Hem",
+      "foreName": "Markus",
+      "longName": "Heckner",
+      "title": "Prof. Dr.",
+      "active": true,
+      "dids": [
+        {
+          "id": 7
+        }
+      ]
+    }
+  ]
+}

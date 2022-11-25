@@ -1,0 +1,76 @@
+{
+  "jsonrpc": "2.0",
+  "id": "ID",
+  "result": [
+    {
+      "id": 354,
+      "name": "Karfreitag",
+      "longName": "Karfreitag",
+      "startDate": 20200410,
+      "endDate": 20200410
+    },
+    {
+      "id": 355,
+      "name": "Ostersonntag",
+      "longName": "Ostersonntag",
+      "startDate": 20200412,
+      "endDate": 20200412
+    },
+    {
+      "id": 356,
+      "name": "Ostermontag",
+      "longName": "Ostermontag",
+      "startDate": 20200413,
+      "endDate": 20200413
+    },
+    {
+      "id": 357,
+      "name": "Christi Himmelfahrt",
+      "longName": "Christi Himmelfahrt",
+      "startDate": 20200521,
+      "endDate": 20200521
+    },
+    {
+      "id": 359,
+      "name": "Pfingstmontag",
+      "longName": "Pfingstmontag",
+      "startDate": 20200601,
+      "endDate": 20200601
+    },
+    {
+      "id": 361,
+      "name": "Fronleichnam",
+      "longName": "Fronleichnam",
+      "startDate": 20200611,
+      "endDate": 20200611
+    },
+    {
+      "id": 363,
+      "name": "Tag der Arbeit",
+      "longName": "Tag der Arbeit",
+      "startDate": 20200501,
+      "endDate": 20200501
+    },
+    {
+      "id": 364,
+      "name": "Mariä Himmelfahrt",
+      "longName": "Mariä Himmelfahrt",
+      "startDate": 20200815,
+      "endDate": 20200815
+    },
+    {
+      "id": 366,
+      "name": "Ferien1",
+      "longName": "12.4.2020-14.4.2020",
+      "startDate": 20200412,
+      "endDate": 20200413
+    },
+    {
+      "id": 367,
+      "name": "Ostern",
+      "longName": "Ostern",
+      "startDate": 20200410,
+      "endDate": 20200410
+    }
+  ]
+}

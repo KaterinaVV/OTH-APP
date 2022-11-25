@@ -1,0 +1,27 @@
+def openapiSpec = "$rootDir/src/main/resources/static/openapi.yaml".toString()
+openApiValidate {
+    inputSpec = openapiSpec
+}
+
+openApiGenerate {
+    generatorName = "kotlin-spring"
+    inputSpec = openapiSpec
+    outputDir = "$rootDir"
+    templateDir = "$rootDir/src/main/resources/openapi-templates"
+    apiPackage = "de.oth.othappserver.api"
+    modelPackage = "de.oth.othappserver.model"
+    packageName = "de.oth.othappserver"
+
+    additionalProperties = [
+            interfaceOnly                    : "true",
+            sourceFolder                     : "build/generated-src/openapi",
+            enumPropertyNaming               : "UPPERCASE",
+            exceptionHandler                 : "false",
+            sortModelPropertiesByRequiredFlag: "true",
+            useTags                          : "true",
+            gradleBuildFile                  : "false"
+    ]
+}
+tasks.openApiGenerate.inputs.file(openapiSpec)
+tasks.openApiGenerate.outputs.dir('build/generated-src/openapi')
+compileKotlin.dependsOn(tasks.openApiGenerate)

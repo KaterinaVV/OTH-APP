@@ -1,0 +1,14 @@
+ktlint {
+    enableExperimentalRules = true
+    reporters {
+        reporter "plain"
+        reporter "html"
+    }
+    additionalEditorconfigFile = file(".editorconfig")
+    disabledRules = ["indent", "no-wildcard-imports", "import-ordering"]
+
+    filter {
+        exclude { element -> element.file.path.contains("generated-src") }
+        exclude { element -> element.file.path.contains("test") }
+    }
+}

@@ -1,0 +1,861 @@
+{
+  "jsonrpc": "2.0",
+  "id": "ID",
+  "result": [
+    {
+      "id": 8546,
+      "name": "(Gesprächsführung) D",
+      "longName": "Gesprächsführung mit ausgew. Zielgruppen (dialogische Haltung) (3.09/2.11 SO, 3.09/2.18 MU, 2.43 SD)",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 4468,
+      "name": "1.01 EiWa",
+      "longName": "1.01 Einführung in das wissenschaftliche Arbeiten",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 8238,
+      "name": "1.01 Nachholer",
+      "longName": "1.01 Nachholer EiWa: Unbedingt vor Semesterbeginn bei Fakultätsassistentin melden!",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 3529,
+      "name": "1.01 Wiss. Arbeiten",
+      "longName": "1.01 Wissenschaftliches Arbeiten mit dem PC",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7092,
+      "name": "1.02.1 FO (Theorie)",
+      "longName": "1.02.1 Forschungstheorie",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7093,
+      "name": "1.02.2 FO (quali)",
+      "longName": "1.02.2 Forschungspraxis (qualitativ)",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7094,
+      "name": "1.02.2 FO (quanti)",
+      "longName": "1.02.2 Forschungspraxis (quantitativ)",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 8595,
+      "name": "1.02.2 Nachholer",
+      "longName": "1.02.2 Nachholer Forschungspraxis: Unbedingt vor Semesterbeginn bei Fakultätsassistentin melden!",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 6266,
+      "name": "1.03  Geschichte",
+      "longName": "1.03 Geschichte der Sozialen Arbeit",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 10,
+      "name": "1.03 Philosophie",
+      "longName": "1.03 Philosophische Grundlagen",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 6267,
+      "name": "1.03 Theorien",
+      "longName": "1.03 Theorien der Sozialen Arbeit",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7948,
+      "name": "1.04.1/1.14 Gesund1",
+      "longName": "1.04.1(SO) / 1.14.2 (MU) Gesundheitswissenschaftliche Grundlagen 1",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7095,
+      "name": "1.04.1/1.14 Gesundhe",
+      "longName": "1.04.1 / 1.14.2 Gesundheitswissenschaftliche Grundlagen 1",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7949,
+      "name": "1.04.2 Gesund2",
+      "longName": "1.04.2 Gesundheitswissenschaftliche Grundlagen 2",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7096,
+      "name": "1.04.2 Gesundheit 2",
+      "longName": "1.04.2 Gesundheitswissenschaftliche Grundlagen 2",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 6270,
+      "name": "1.05 Gesundheit 2",
+      "longName": "1.05 Ausgewählte Themen der Sozialmedizin",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 6271,
+      "name": "1.05 Orgalehre",
+      "longName": "1.05 Organisationslehre",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 3533,
+      "name": "1.05 Sozialmedizin 2",
+      "longName": "1.05 Ausgewählte Themen der Sozialmedizin",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7098,
+      "name": "1.06/.1.14.1 Psy 2",
+      "longName": "1.06/1.14.1 Psychologische Grundlagen 2 (Allgemeine Psychologie)  - 1.14.1 Modul-Nr. BAMU",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 8208,
+      "name": "1.06/.1.14 Psy2",
+      "longName": "1.06(SO) / 1.14.1 (MU) Psychologische Grundlagen 2 (Allgemeine Psychologie)",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7097,
+      "name": "1.06/1.14.1 Psy 1",
+      "longName": "1.06/1.14.1 Psychologische Grundlagen 1 (Kognition und Lernen) - 1.14.1 Modul-Nr. BAMU",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 8207,
+      "name": "1.06/1.14 Psy1",
+      "longName": "1.06(SO) / 1.14(MU)  Psychologische Grundlagen 1 (Kognition und Lernen)",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 8209,
+      "name": "1.07 Recht",
+      "longName": "1.07 Rechtliche Grundlagen",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 3723,
+      "name": "1.07 Recht (Method.)",
+      "longName": "1.07 Rechtliche Grundlagen: Grundlagen der Methodik (1. Semester, 1 von 4 SWS)",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 3722,
+      "name": "1.07 Recht 1. Sem.",
+      "longName": "1.07 Rechtliche Grundlagen (1. Semester, 3 von 4 SWS)",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 6274,
+      "name": "1.08 Familienrecht",
+      "longName": "1.08 Familienrecht",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7100,
+      "name": "1.08 Recht (BASD)",
+      "longName": "1.08 Sozialleistungsrecht, Bildungs- und Erziehungsrecht (BASD)",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7099,
+      "name": "1.08 Sozial.-Recht",
+      "longName": "1.08 Sozialleistungsrecht",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 19,
+      "name": "1.09 Erziehung I",
+      "longName": "1.09 Erziehungswissenschaftliche Grundlagen I",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 20,
+      "name": "1.09 Erziehung II",
+      "longName": "1.09 Erziehungswissenschaftliche Grundlagen II",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 6276,
+      "name": "1.10 Politik",
+      "longName": "1.10.2 Politikwissenschaftliche Grundlagen",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 6275,
+      "name": "1.10 Soziologie",
+      "longName": "1.10.1 Soziologische Grundlagen",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7950,
+      "name": "1.11.1 Gespräch",
+      "longName": "1.11.1 Gesprächsführung in der Beratung",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 6277,
+      "name": "1.11.1 Gesprächsführ",
+      "longName": "1.11.1 Gesprächsführung in der Beratung",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7951,
+      "name": "1.11.1 GF Nachhholer",
+      "longName": "1.11.1 Nachholer Gesprächsführung: Unbedingt vor Semesterbeginn bei Fakultätsassistentin melden!",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8040",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7952,
+      "name": "1.11.2 Gemeinwesen",
+      "longName": "1.11.2 Gemeinwesenarbeit",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7953,
+      "name": "1.11.3 Fallarbeit",
+      "longName": "1.11.3 Sozialpädagogische Fallarbeit",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7954,
+      "name": "1.11.4 Gruppenarbeit",
+      "longName": "1.11.4 Gruppenarbeit",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 24,
+      "name": "1.11 Fallarbeit",
+      "longName": "1.11 Sozialpädagogische Fallarbeit",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 25,
+      "name": "1.11 Gemeinwesen",
+      "longName": "1.11 Gemeinwesenarbeit",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 27,
+      "name": "1.11 Gruppenarbeit",
+      "longName": "1.11 Gruppenarbeit",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7956,
+      "name": "1.12.1 Ästhet. Bildu",
+      "longName": "1.12.1 Grundlagen der Ästhetischen Bildung und Kulturvermittlung  (Schwerpunkt Ästh. Bildung)",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 6280,
+      "name": "1.12.1 Ästhetik",
+      "longName": "1.12.1 Grundlagen der Ästhetischen Bildung und Kulturvermittlung",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8040",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7957,
+      "name": "1.12.1 Kulturvermitt",
+      "longName": "1.12.1 Grundlagen der Ästhetischen Bildung und Kulturvermittlung (Schwerpunkt Kulturvermittlung)",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9205,
+      "name": "1.12.2 (AW) Instrume",
+      "longName": "1.12.2 (AW) Instrumentalensemble",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9206,
+      "name": "1.12.2 Audio",
+      "longName": "1.12.2(SO)  / 2.42(SD) Digitale Audioproduktion",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9207,
+      "name": "1.12.2 Cartoon/Karik",
+      "longName": "1.12.2(SO)  / 2.42(SD)  Cartoon und Karikatur in der Praxis",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9208,
+      "name": "1.12.2 Intermedial",
+      "longName": "1.12.2(SO) /2.42(SD) Intermediales Arbeiten",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9209,
+      "name": "1.12.2 Kampfkunst 1",
+      "longName": "1.12.2(SO)  / 2.42(SD)  Einführung in die Kampfkunst",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9210,
+      "name": "1.12.2 Kampfkunst 2",
+      "longName": "1.12.2(SO)  / 2.42(SD) Kung Fu Kampfkunst (Kurzstock)",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9211,
+      "name": "1.12.2 Layout/Gestal",
+      "longName": "1.12.2(SO)  / 2.42(SD)  Layout und Gestaltung",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9212,
+      "name": "1.12.2 Mediale Komm.",
+      "longName": "1.12.2(SO) Mediale Kommunikation",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9213,
+      "name": "1.12.2 Medienpäd.",
+      "longName": "1.12.2(SO) Einführung in die Medienpädagogik",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9214,
+      "name": "1.12.2 Stimme im Ber",
+      "longName": "1.12.2(SO) / 2.43 (SD) Stimme im Beruf",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9215,
+      "name": "1.12.2 Web 2.0",
+      "longName": "1.12.2(SO) Web 2.0 - Virtuelles (Zusammen-)Arbeiten",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7958,
+      "name": "1.12.3/2.42 Jugendku",
+      "longName": "1.12.3 / 2.42 Jugendkultur und jugendkultureller Ausdruck",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9216,
+      "name": "1.12.3 Ästhetik",
+      "longName": "1.12.3(SO) / 2.42+3.42.2(SD) Ästhetik des Häßlichen",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9217,
+      "name": "1.12.3 Bildnerisch",
+      "longName": "1.12.3(SO) / 2.42+3.42.2(SD) Bildnerisches Gestalten",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9218,
+      "name": "1.12.3 Forumtheater",
+      "longName": "1.12.3(SO) / 2.42+3.42.2(SD) Forumtheater",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9219,
+      "name": "1.12.3 Fotografie",
+      "longName": "1.12.3(SO) / 3.42.2(SD) Digitale Fotografie  / Fotografische Gestaltungstechniken",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9220,
+      "name": "1.12.3 Interkulturel",
+      "longName": "1.12.3(SO) / 2.45+3.41.2(SD)  Interkulturelle Kommunikation",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9221,
+      "name": "1.12.3 Jugendkultur",
+      "longName": "1.12.3(SO) / 2.42+3.42.2(SD) Jugendkultur und jugendkultureller Ausdruck",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9222,
+      "name": "1.12.3 Medienarbeit",
+      "longName": "1.12.3(SO) / 3.42.2(SD) Handlungsorientierte Medienpädagogik: Aktive Medienarbeit",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9223,
+      "name": "1.12.3 Medienerziehu",
+      "longName": "1.12.3(SO) 3.42.1(SD) Medienerziehung – Medienwirkung im Kindes- und Jugendalter",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9224,
+      "name": "1.12.3 Naturwerkstat",
+      "longName": "1.12.3(SO) / 2.42+3.42.2(SD) Holz- und Naturwerkstatt",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9225,
+      "name": "1.12.3 Plastisch",
+      "longName": "1.12.3(SO) / 2.42+3.42.2(SD) Plastisches Gestalten",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9226,
+      "name": "1.12.3 Schreiben",
+      "longName": "1.12.3(SO) / 2.42+3.42.2(SD) Schreibwerkstatt",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 6279,
+      "name": "1.12 + 1.01 Nachhole",
+      "longName": "1.12 + 1.01  Nachholer Theorie-Praxis-Transfer bzw. Einführung in das Wissenschaftliche Arbeiten",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 9227,
+      "name": "1.13.1 Betreuung",
+      "longName": "1.13.1 Handlungsfeld: Soziale Arbeit mit psychisch Kranken und betreuten Menschen",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9228,
+      "name": "1.13.1 Familie",
+      "longName": "1.13.1 Handlungsfeld: Hilfen für Familien",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9229,
+      "name": "1.13.1 Gesundheit",
+      "longName": "1.13.1 Handlungsfeld: Ambulante und stationäre Einrichtungen der Gesundheitshilfe",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9231,
+      "name": "1.13.1 Reha",
+      "longName": "1.13.1 Handlungsfeld: Rehabilitation und Behindertenhilfe",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9232,
+      "name": "1.13.1 Schule",
+      "longName": "1.13.1 Handlungsfeld: Soziale Dienste an Schulen",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9234,
+      "name": "1.13.1 Straffällige",
+      "longName": "1.13.1 Handlungsfeld: Straffälligenhilfe, Suchtkrankenhilfe, Wohnungslosenhilfe",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 9236,
+      "name": "1.13.2 StPr EW",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Beratung / Altenhilfe / Erwachsenenbildung",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 9237,
+      "name": "1.13.2 StPr Familie",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Erziehungshilfen / Familienpädagogik",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 9239,
+      "name": "1.13.2 StPr Jugend",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Jugendarbeit / Jugendsozialarbeit",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 9240,
+      "name": "1.13.2 StPr Kinder",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Soziale Arbeit mit Kindern",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 9241,
+      "name": "1.13.2 StPr Migratio",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Migration / Flüchtlingsarbeit",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 9242,
+      "name": "1.13.2 StPr Psych. K",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Arbeit mit psychisch kranken Menschen",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 9243,
+      "name": "1.13.2 StPr Reha",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Rehabilitation / Behindertenhilfe",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 9244,
+      "name": "1.13.2 StPr Reso",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Resozialisierung / Suchtberatung / Gefährdetenhilfe",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 9245,
+      "name": "1.13.2 StPr Schule",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Jugendhilfe / Schulsozialarbeit",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ff8000"
+    },
+    {
+      "id": 7126,
+      "name": "1.13 Betreuung",
+      "longName": "1.13.1 Handlungsfeld: Soziale Arbeit mit psychisch Kranken und betreuten Menschen",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 8240,
+      "name": "1.13 Familie",
+      "longName": "1.13.1 Handlungsfeld: Hilfen für Familien",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7122,
+      "name": "1.13 Gesundheit",
+      "longName": "1.13.1 Handlungsfeld: Ambulante und stationäre Einrichtungen der Gesundheitshilfe",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7123,
+      "name": "1.13 JF",
+      "longName": "1.13 Handlungsfeld: Hilfen für Familien",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7667,
+      "name": "1.13 Kinder",
+      "longName": "1.13.1 Handlungsfeld: Soziale Arbeit mit Kindern",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7666,
+      "name": "1.13 Reha",
+      "longName": "1.13.1 Handlungsfeld: Rehabilitation und Behindertenhilfe",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7127,
+      "name": "1.13 Schule",
+      "longName": "1.13.1 Handlungsfeld: Soziale Dienste an Schulen",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7668,
+      "name": "1.13 Sozialpsychiatr",
+      "longName": "1.13.1 Handlungsfeld: Sozialpsychiatrie",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7133,
+      "name": "1.13 StPr EW",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Beratung / Altenhilfe / Erwachsenenbildung",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7134,
+      "name": "1.13 StPr Familie",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Erziehungshilfen / Familienpädagogik",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7671,
+      "name": "1.13 StPr Gesundheit",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Soziale Arbeit im Gesundheitswesen",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7135,
+      "name": "1.13 StPr JJ",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Jugendarbeit / Jugendsozialarbeit",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7141,
+      "name": "1.13 StPr Kinder",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Soziale Arbeit mit Kindern",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7137,
+      "name": "1.13 StPr Migration",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Migration / Flüchtlingsarbeit",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7132,
+      "name": "1.13 StPr Psych. Kra",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Arbeit mit psychisch kranken Menschen",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7138,
+      "name": "1.13 StPr Reha",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Rehabilitation / Behindertenhilfe",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7139,
+      "name": "1.13 StPr Reso",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Resozialisierung / Suchtberatung / Gefährdetenhilfe",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7136,
+      "name": "1.13 StPr Schule",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Jugendhilfe / Schulsozialarbeit",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 8241,
+      "name": "1.13 StPr Systemisch",
+      "longName": "1.13.2 Studienbegleitendes Praktikum / SP: Systemische Beratungsansätze",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 7130,
+      "name": "1.13 Straffällige",
+      "longName": "1.13.1 Handlungsfeld: Straffälligenhilfe, Suchtkrankenhilfe, Wohnungslosenhilfe",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 7670,
+      "name": "1.13 Sucht",
+      "longName": "1.13.1 Handlungsfeld: Suchthilfe: Einrichtungen und aktuelle Themen",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 74,
+      "name": "1.18 Prax.begleit.",
+      "longName": "1.18 Praxisbegleitende Lehrveranstaltung",
+      "alternateName": "",
+      "active": true
+    },
+    {
+      "id": 75,
+      "name": "1.18 Prax.internat.",
+      "longName": "1.18 Begleitveranstaltung Auslandspraktikum",
+      "alternateName": "",
+      "active": true,
+      "foreColor": "ff8000",
+      "backColor": "ffffff"
+    },
+    {
+      "id": 5297,
+      "name": "IM_TI",
+      "longName": "Theoretische Informatik",
+      "alternateName": "TI",
+      "active": true
+    }
+  ]
+}

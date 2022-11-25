@@ -1,0 +1,88 @@
+{
+  "@odata.context": "",
+  "value": [
+    {
+      "Id": "AAMkADY0OGFhZGYwLWE3NjAtNDBhYS05YjdkLWM5YmIyMjAyOGNkZABGAAAAAAAjrBl1DhKxSZPoKpS61hlTBwCWJYg8Ynx_S71X9td6BJHtAAAAAAENAACWJYg8Ynx_S71X9td6BJHtAABmq9UAAAA=",
+      "Categories": [],
+      "OriginalStartTimeZone": "W. Europe Standard Time",
+      "OriginalEndTimeZone": "W. Europe Standard Time",
+      "Subject": "Serie",
+      "BodyPreview": "",
+      "IsAllDay": true,
+      "SeriesMasterId": null,
+      "Type": "SeriesMaster",
+      "Body": {
+        "ContentType": "HTML",
+        "Content": "seriesContent"
+      },
+      "Start": {
+        "DateTime": "2020-02-13T00:00:00.0000000",
+        "TimeZone": "W. Europe Standard Time"
+      },
+      "End": {
+        "DateTime": "2020-02-15T00:00:00.0000000",
+        "TimeZone": "W. Europe Standard Time"
+      },
+      "Location": {
+        "DisplayName": "",
+        "Address": {
+          "Type": "Unknown"
+        },
+        "Coordinates": {}
+      },
+      "Organizer": {
+        "EmailAddress": {
+          "Name": "Max Mustermann",
+          "Address": "max.mustermann@oth-regensburg.de"
+        }
+      }
+    },
+    {
+      "Id": "AAMkADY0OGFhZGYwLWE3NjAtNDBhYS05YjdkLWM5YmIyMjAyOGNkZAFRAAgI17JzKnyAAEYAAAAAI6wZdQ4SsUmT6CqUutYZUwcAliWIPGJ8fku9V-bXegSR7QAAAAABDQAAliWIPGJ8fku9V-bXegSR7QAAZqvVAQAAEA==",
+      "SeriesMasterId": "AAMkADY0OGFhZGYwLWE3NjAtNDBhYS05YjdkLWM5YmIyMjAyOGNkZABGAAAAAAAjrBl1DhKxSZPoKpS61hlTBwCWJYg8Ynx_S71X9td6BJHtAAAAAAENAACWJYg8Ynx_S71X9td6BJHtAABmq9UAAAA=",
+      "Type": "Occurrence",
+      "Start": {
+        "DateTime": "2020-02-13T00:00:00.0000000",
+        "TimeZone": "W. Europe Standard Time"
+      },
+      "End": {
+        "DateTime": "2020-02-14T00:00:00.0000000",
+        "TimeZone": "W. Europe Standard Time"
+      }
+    },
+    {
+      "Id": "AAMkADY0OGFhZGYwLWE3NjAtNDBhYS05YjdkLWM5YmIyMjAyOGNkZAFRAAgI17Dg1akAAEYAAAAAI6wZdQ4SsUmT6CqUutYZUwcAliWIPGJ8fku9V-bXegSR7QAAAAABDQAAliWIPGJ8fku9V-bXegSR7QAAZqvVAAAAEA==",
+      "Categories": [],
+      "OriginalStartTimeZone": "W. Europe Standard Time",
+      "OriginalEndTimeZone": "W. Europe Standard Time",
+      "Subject": "Serie Exception",
+      "IsAllDay": false,
+      "SeriesMasterId": "AAMkADY0OGFhZGYwLWE3NjAtNDBhYS05YjdkLWM5YmIyMjAyOGNkZABGAAAAAAAjrBl1DhKxSZPoKpS61hlTBwCWJYg8Ynx_S71X9td6BJHtAAAAAAENAACWJYg8Ynx_S71X9td6BJHtAABmq9UAAAA=",
+      "Type": "Exception",
+      "Body": {
+        "ContentType": "HTML",
+        "Content": "Serie Exception Body"
+      },
+      "Start": {
+        "DateTime": "2020-02-14T00:00:00.0000000",
+        "TimeZone": "W. Europe Standard Time"
+      },
+      "End": {
+        "DateTime": "2020-02-14T12:00:00.0000000",
+        "TimeZone": "W.EuropeStandardTime"
+      },
+      "Location": {
+        "DisplayName": ""
+      },
+      "Recurrence": null,
+      "Attendees": [],
+      "Organizer": {
+        "EmailAddress": {
+          "Name": "Max Mustermann",
+          "Address": "max.mustermann@oth-regensburg.de"
+        }
+      }
+    }
+  ],
+  "@odata.deltaLink": "https://exchange.hs-regensburg.de/api/v2.0/me/calendarview/?startDateTime=2020-02-13T00%3a00%2b01%3a00&endDateTime=2020-02-14&%24deltatoken=kEARBJYliDxifH5LvVf213oEke0AAGar0S4BAAAA"
+}

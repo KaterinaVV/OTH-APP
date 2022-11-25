@@ -1,0 +1,140 @@
+{
+  "groups": [
+    {
+      "name": "app.exchange",
+      "type": "de.oth.othappserver.exchange.ExchangeProperties",
+      "sourceType": "de.oth.othappserver.exchange.ExchangeProperties"
+    },
+    {
+      "name": "app.http",
+      "type": "de.oth.othappserver.config.HttpProperties",
+      "sourceType": "de.oth.othappserver.config.HttpProperties"
+    },
+    {
+      "name": "app.jobmarket",
+      "type": "de.oth.othappserver.jobmarket.JobmarketProperties",
+      "sourceType": "de.oth.othappserver.jobmarket.JobmarketProperties"
+    },
+    {
+      "name": "app.webuntis",
+      "type": "de.oth.othappserver.webuntis.WebUntisProperties",
+      "sourceType": "de.oth.othappserver.webuntis.WebUntisProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.exchange.feedback-mail-address",
+      "type": "java.lang.String",
+      "description": "Address to send feedback emails to",
+      "sourceType": "de.oth.othappserver.exchange.ExchangeProperties"
+    },
+    {
+      "name": "app.exchange.mail-uri",
+      "type": "java.lang.String",
+      "description": "URI for the mail API. Has a default",
+      "sourceType": "de.oth.othappserver.exchange.ExchangeProperties"
+    },
+    {
+      "name": "app.exchange.page-size",
+      "type": "java.lang.Integer",
+      "description": "Size of a page for paginated requests to exchange.",
+      "sourceType": "de.oth.othappserver.exchange.ExchangeProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "app.exchange.password",
+      "type": "java.lang.String",
+      "description": "Password for the exchange server connection.",
+      "sourceType": "de.oth.othappserver.exchange.ExchangeProperties",
+      "defaultValue": "nopasswordprovided"
+    },
+    {
+      "name": "app.exchange.uri",
+      "type": "java.lang.String",
+      "description": "URI for the events API exchange calendar.",
+      "sourceType": "de.oth.othappserver.exchange.ExchangeProperties"
+    },
+    {
+      "name": "app.exchange.username",
+      "type": "java.lang.String",
+      "description": "Username for the exchange server connection.",
+      "sourceType": "de.oth.othappserver.exchange.ExchangeProperties"
+    },
+    {
+      "name": "app.http.connect-timout",
+      "type": "java.lang.Integer",
+      "description": "Timeout until a HTTP connection has to be established with the remote host.",
+      "sourceType": "de.oth.othappserver.config.HttpProperties",
+      "defaultValue": -1
+    },
+    {
+      "name": "app.http.connection-timout",
+      "type": "java.lang.Integer",
+      "description": "Timeout until a HTTP connection has to be finished sending.",
+      "sourceType": "de.oth.othappserver.config.HttpProperties",
+      "defaultValue": -1
+    },
+    {
+      "name": "app.http.socket-timout",
+      "type": "java.lang.Integer",
+      "description": "Defines the socket timeout in milliseconds, which is the timeout for waiting for data or, put differently, a maximum period inactivity between two consecutive data packets).",
+      "sourceType": "de.oth.othappserver.config.HttpProperties",
+      "defaultValue": -1
+    },
+    {
+      "name": "app.jobmarket.client-id",
+      "type": "java.lang.String",
+      "description": "Username used for JobMarket authentication.",
+      "sourceType": "de.oth.othappserver.jobmarket.JobmarketProperties"
+    },
+    {
+      "name": "app.jobmarket.client-key",
+      "type": "java.lang.String",
+      "description": "Password key used for JobMarket authentication.",
+      "sourceType": "de.oth.othappserver.jobmarket.JobmarketProperties"
+    },
+    {
+      "name": "app.jobmarket.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Flag enabling JobMarket feature.",
+      "sourceType": "de.oth.othappserver.jobmarket.JobmarketProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "app.jobmarket.uri",
+      "type": "java.lang.String",
+      "description": "URI pointing to JobMarket API.",
+      "sourceType": "de.oth.othappserver.jobmarket.JobmarketProperties",
+      "defaultValue": "https:\/\/jobboerse.oth-regensburg.de\/srv.php\/API2"
+    },
+    {
+      "name": "app.webuntis.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Flag enabling WebUntis feature.",
+      "sourceType": "de.oth.othappserver.webuntis.WebUntisProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "app.webuntis.password",
+      "type": "java.lang.String",
+      "description": "Password used for WebUntis authentication.",
+      "sourceType": "de.oth.othappserver.webuntis.WebUntisProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "app.webuntis.uri",
+      "type": "java.lang.String",
+      "description": "URI pointing at a valid WebUntis service.",
+      "sourceType": "de.oth.othappserver.webuntis.WebUntisProperties",
+      "defaultValue": "https:\/\/kephiso.webuntis.com\/WebUntis\/jsonrpc.do?school=OTH-Regensburg"
+    },
+    {
+      "name": "app.webuntis.username",
+      "type": "java.lang.String",
+      "description": "Username used for WebUntis authentication.",
+      "sourceType": "de.oth.othappserver.webuntis.WebUntisProperties",
+      "defaultValue": ""
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,375 @@
+{
+  "jsonrpc": "2.0",
+  "id": "123",
+  "result": [
+    {
+      "id": 1653279,
+      "date": 20200317,
+      "startTime": 815,
+      "endTime": 945,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [],
+      "ro": [
+        {
+          "id": 873,
+          "name": "K018"
+        }
+      ]
+    },
+    {
+      "id": 1653280,
+      "date": 20200317,
+      "startTime": 1000,
+      "endTime": 1130,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [],
+      "ro": [
+        {
+          "id": 873,
+          "name": "K018"
+        }
+      ]
+    },
+    {
+      "id": 1653678,
+      "date": 20200319,
+      "startTime": 1330,
+      "endTime": 1500,
+      "kl": [
+        {
+          "id": 7840
+        },
+        {
+          "id": 7841
+        },
+        {
+          "id": 8005
+        }
+      ],
+      "su": [
+        {
+          "id": 5231,
+          "name": "FPP",
+          "longname": "Fortgeschrittene Produktionsplanung"
+        }
+      ],
+      "ro": [
+        {
+          "id": 907,
+          "name": "K015"
+        }
+      ]
+    },
+    {
+      "id": 1653679,
+      "date": 20200319,
+      "startTime": 1515,
+      "endTime": 1645,
+      "kl": [
+        {
+          "id": 7840
+        },
+        {
+          "id": 7841
+        },
+        {
+          "id": 8005
+        }
+      ],
+      "su": [
+        {
+          "id": 5231,
+          "name": "FPP",
+          "longname": "Fortgeschrittene Produktionsplanung"
+        }
+      ],
+      "ro": [
+        {
+          "id": 907,
+          "name": "K015"
+        }
+      ]
+    },
+    {
+      "id": 1654021,
+      "date": 20200317,
+      "startTime": 1145,
+      "endTime": 1315,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 5263,
+          "name": "MST",
+          "longname": "Moderne Softwaretechniken"
+        }
+      ],
+      "ro": [
+        {
+          "id": 873,
+          "name": "K018"
+        }
+      ]
+    },
+    {
+      "id": 1654022,
+      "date": 20200318,
+      "startTime": 1000,
+      "endTime": 1130,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 5263,
+          "name": "MST",
+          "longname": "Moderne Softwaretechniken"
+        }
+      ],
+      "ro": [
+        {
+          "id": 906,
+          "name": "K014"
+        }
+      ]
+    },
+    {
+      "id": 1654346,
+      "date": 20200318,
+      "startTime": 815,
+      "endTime": 945,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 5285,
+          "name": "SAL",
+          "longname": "Spezielle Algorithmen"
+        }
+      ],
+      "ro": [
+        {
+          "id": 906,
+          "name": "K014"
+        }
+      ]
+    },
+    {
+      "id": 1654347,
+      "date": 20200319,
+      "startTime": 1000,
+      "endTime": 1130,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 5285,
+          "name": "SAL",
+          "longname": "Spezielle Algorithmen"
+        }
+      ],
+      "ro": [
+        {
+          "id": 906,
+          "name": "K014"
+        }
+      ]
+    },
+    {
+      "id": 1654355,
+      "date": 20200319,
+      "startTime": 815,
+      "endTime": 945,
+      "kl": [
+        {
+          "id": 7839
+        },
+        {
+          "id": 7840
+        },
+        {
+          "id": 7841
+        },
+        {
+          "id": 8005
+        }
+      ],
+      "su": [
+        {
+          "id": 5286,
+          "name": "SCM",
+          "longname": "Supply Chain Management"
+        }
+      ],
+      "ro": [
+        {
+          "id": 906,
+          "name": "K014"
+        }
+      ]
+    },
+    {
+      "id": 1654721,
+      "date": 20200318,
+      "startTime": 1145,
+      "endTime": 1315,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 7474,
+          "name": "FKS",
+          "longname": "Fortgeschrittene Kommunikationssysteme"
+        }
+      ],
+      "ro": [
+        {
+          "id": 906,
+          "name": "K014"
+        }
+      ]
+    },
+    {
+      "id": 1654722,
+      "date": 20200320,
+      "startTime": 815,
+      "endTime": 945,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 7474,
+          "name": "FKS",
+          "longname": "Fortgeschrittene Kommunikationssysteme"
+        }
+      ],
+      "ro": [
+        {
+          "id": 872,
+          "name": "K017"
+        }
+      ]
+    },
+    {
+      "id": 1654730,
+      "date": 20200318,
+      "startTime": 1145,
+      "endTime": 1315,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 7474,
+          "name": "FKS",
+          "longname": "Fortgeschrittene Kommunikationssysteme"
+        }
+      ],
+      "ro": [
+        {
+          "id": 906,
+          "name": "K014"
+        }
+      ]
+    },
+    {
+      "id": 1654731,
+      "date": 20200320,
+      "startTime": 815,
+      "endTime": 945,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 7474,
+          "name": "FKS",
+          "longname": "Fortgeschrittene Kommunikationssysteme"
+        }
+      ],
+      "ro": [
+        {
+          "id": 872,
+          "name": "K017"
+        }
+      ]
+    },
+    {
+      "id": 1654739,
+      "date": 20200320,
+      "startTime": 1000,
+      "endTime": 1130,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 7479,
+          "name": "MTI",
+          "longname": "Moderne Theoretischen Informatik"
+        }
+      ],
+      "ro": [
+        {
+          "id": 872,
+          "name": "K017"
+        }
+      ]
+    },
+    {
+      "id": 1654740,
+      "date": 20200320,
+      "startTime": 1145,
+      "endTime": 1315,
+      "kl": [
+        {
+          "id": 7840
+        }
+      ],
+      "su": [
+        {
+          "id": 7479,
+          "name": "MTI",
+          "longname": "Moderne Theoretischen Informatik"
+        }
+      ],
+      "ro": [
+        {
+          "id": 872,
+          "name": "K017"
+        }
+      ]
+    }
+  ]
+}

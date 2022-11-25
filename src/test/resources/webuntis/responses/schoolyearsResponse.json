@@ -1,0 +1,42 @@
+{
+  "jsonrpc": "2.0",
+  "id": "ID",
+  "result": [
+    {
+      "id": 19,
+      "name": "WiSe 2018/2019",
+      "startDate": 20181001,
+      "endDate": 20190314
+    },
+    {
+      "id": 20,
+      "name": "SoSe 2019",
+      "startDate": 20190318,
+      "endDate": 20190930
+    },
+    {
+      "id": 21,
+      "name": "WiSe 2019/2020",
+      "startDate": 20191001,
+      "endDate": 20200314
+    },
+    {
+      "id": 22,
+      "name": "SoSe 2020",
+      "startDate": 20200316,
+      "endDate": 20200930
+    },
+    {
+      "id": 23,
+      "name": "WiSe 2020/2021",
+      "startDate": 20201001,
+      "endDate": 20210314
+    },
+    {
+      "id": 24,
+      "name": "SoSe 2021",
+      "startDate": 20210315,
+      "endDate": 20210930
+    }
+  ]
+}

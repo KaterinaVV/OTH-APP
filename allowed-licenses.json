@@ -1,0 +1,49 @@
+{
+  "allowedLicenses": [
+    {
+      "moduleLicense": "Eclipse Public License - v 1.0"
+    },
+    {
+      "moduleLicense": "Eclipse Public License - v 2.0"
+    },
+    {
+      "moduleLicense": "Apache License, Version 2.0"
+    },
+    {
+      "moduleLicense": "MIT License"
+    },
+    {
+      "moduleLicense": "COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0"
+    },
+    {
+      "moduleLicense": "COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.1"
+    },
+    {
+      "moduleLicense": "The 2-Clause BSD License"
+    },
+    {
+      "moduleLicense": "The 3-Clause BSD License"
+    },
+    {
+      "moduleLicense": "GNU LESSER GENERAL PUBLIC LICENSE 2.1"
+    },
+    {
+      "moduleLicense": "Eclipse Distribution License - v 1.0"
+    },
+    {
+      "moduleLicense": "MPL 2.0 or EPL 1.0"
+    },
+    {
+      "moduleLicense": "CDDL+GPL License"
+    },
+    {
+      "moduleLicense": "Creative Commons Legal Code"
+    },
+    {
+      "moduleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+    },
+    {
+      "moduleName": "org.jetbrains.kotlinx:kotlinx-coroutines-core-metadata"
+    }
+  ]
+}

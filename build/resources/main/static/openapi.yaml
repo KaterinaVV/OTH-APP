@@ -1,0 +1,2349 @@
+openapi: 3.0.3
+info:
+  title: OTH-App API
+  version: 'dev.20221124'
+  contact:
+    name: Studierendenvertretung
+    url: https://stuv.othr.de
+    email: studierendenvertretung@oth-regensburg.de
+  x-logo:
+    url: othr_logo.png
+
+tags:
+  - name: Introduction
+    description: |
+      This API is documented in **OpenAPI** format and used by the OTH Regensburg App.
+
+      # Errors
+      The API uses standard HTTP status codes to indicate the success or failure of the API call.
+      The body of the response follows the <a href="https://tools.ietf.org/html/rfc7807">RFC 7807</a> spec:
+      ```
+      {
+        "title": "Not Found",
+        "status":404,
+        "detail": "Requested resource not found."
+      }
+      ```
+      A error returns a response of Content-Type `application/problem+json` and usually contains at least `title`, `status` and `detail` properties.
+      Depending on the error there might be other properties as well.
+
+      ## Additional error types
+      In addition to descriptive error title and status some errors provide more specific types.
+      An error's `type` property is a stable URI which uniquely identifies this error type.
+      These types might be used to better handle errors or display specific text to your clients. You can find the at an endpoints documentation.
+
+      ## Service Unavailable
+      It might happen that a third party service is not available for some reason and we therefore can unable to process some requests.
+      If that is the case typically a `503 Service Unavailable` error is returned as a response.
+
+      # Dates
+      This API follows the Internet Date/Time Format proposed in <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>.
+
+      **Examples:**
+      * A simple date without a time: `2022-11-16`
+      * A date with time and offset: `2022-11-16T23:10Z`
+
+      For a detailed Internet Date/Time Format specification we suggest reading <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC3339 Section 5.6</a>
+
+      # Caching
+      This API returns ETag Caching headers as proposed in <a href="https://tools.ietf.org/html/rfc7232#section-2.3">RFC 7232</a>.
+
+      Clients must not use these header even though its strongly encouraged to do so. By using these headers network bandwith is reduced.
+
+      # Rate Limiting
+      Access to this API is rate limited per IP. If you exceed the rate limit a `429 Too Many Requests` will be returned.
+  - name: University
+    description: The university API
+  - name: Faculty
+    description: The faculty API
+  - name: Semester
+    description: The semester API
+  - name: Timetable
+    description: The timetable API
+  - name: EventCalendar
+    description: The event calendar API
+  - name: JobMarket
+    description: The job market API
+  - name: RoomFinder
+    description: The room finder API
+  - name: Feedback
+    description: The feedback API
+  - name: Election
+    description: The election API
+  - name: generic_model
+    x-displayName: Generic Models
+    description: |
+      ## Error Model
+      The Model of a error returned by the API.
+      <SchemaDefinition schemaRef="#/components/schemas/Error" showReadOnly={true} showWriteOnly={true} />
+  - name: university_model
+    x-displayName: University Models
+    description: |
+      ## University information Model
+      The model of a university information.
+      <SchemaDefinition schemaRef="#/components/schemas/TimetableItem" showReadOnly={true} showWriteOnly={true} />
+      ## Timetable Model
+      The model of a semesters timetable item.
+      <SchemaDefinition schemaRef="#/components/schemas/TimetableItem" showReadOnly={true} showWriteOnly={true} />
+      ## Faculty Model
+      <SchemaDefinition schemaRef="#/components/schemas/Faculty"  showReadOnly={true} showWriteOnly={true} />
+      ## Faculty Details Model
+      This model contains detailed Information about a Faculty like `semesters` and `lecturer`.
+      <SchemaDefinition schemaRef="#/components/schemas/FacultyDetail"  showReadOnly={true} showWriteOnly={true} />
+
+      ## Job Market Models
+      This section contains all top level models for Job Market requests.
+      ### Job Market
+      <SchemaDefinition schemaRef="#/components/schemas/JobMarket" showReadOnly={true} showWriteOnly={true} />
+      ### Job Query
+      <SchemaDefinition schemaRef="#/components/schemas/JobQuery" showReadOnly={true} showWriteOnly={true} />
+  - name: events_model
+    x-displayName: Calendar Event Models
+    description: |
+      The model of a events query result.
+      <SchemaDefinition schemaRef="#/components/schemas/EventQueryResult" exampleRef="#/components/examples/EventQueryResult" showReadOnly={true} showWriteOnly={true} />
+
+      ## Event Model
+      The following schema definition show every possible event type.
+      <SchemaDefinition schemaRef="#/components/schemas/Event" showReadOnly={true} showWriteOnly={true} />
+
+      ## Event Calendar Category Model
+      <SchemaDefinition schemaRef="#/components/schemas/Category" showReadOnly={true} showWriteOnly={true} />
+  - name: changelog_v1
+    x-displayName: Changelog API v1
+    description: |
+      ### Changes in API version **1.2**
+      #### New endpoints
+      * Added <a href="/#tag/JobMarket">Job Market</a> endpoints.
+      * Added <a href="/#tag/RoomFinder">Room Finder</a> endpoints.
+
+      #### Changed endpoints
+      * Added attribute `roomFinderFilter` to <a href="/#operation/info">University information</a> endpoint. Removed unused `buildings` attribute.
+      * Added support for pagination to <a href="/#operation/queryEvents">List events</a> endpoint.
+
+      ### Changes in API version **1.1**
+      #### New endpoints
+      * Added <a href="/#operation/info">University information</a> and <a href="/#tag/Semester">Semester</a> endpoints.
+
+      #### New Properties
+      * Added `color` to the <a href="/#section/Faculty-Model">Faculty</a> and <a href="/#section/Event-Calendar-Category-Model">Event Calendar Category</a> Models.
+      * Added `semesters` and `lecturer` to the <a href="/#section/Faculty-Model">Faculty Details</a> Model.
+x-tagGroups:
+  - name: Getting Started
+    tags:
+      - Introduction
+  - name: University
+    tags:
+      - University
+      - Semester
+      - Faculty
+      - JobMarket
+      - RoomFinder
+      - Feedback
+      - Election
+  - name: Events
+    tags:
+      - EventCalendar
+  - name: Models
+    tags:
+      - generic_model
+      - university_model
+      - events_model
+  - name: Changelog
+    tags:
+      - changelog_v1
+
+
+paths:
+  "/v1/eventcalendar/category":
+    get:
+      tags:
+        - EventCalendar
+      operationId: categories
+      summary: List categories
+      description: Lists all event categories
+      responses:
+        '200':
+          description: Event categories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'localhost:8080/v1/eventcalendar/category' -H 'Accept: application/json'
+
+  "/v1/eventcalendar/event":
+    get:
+      tags:
+        - EventCalendar
+      operationId: queryEvents
+      summary: List events
+      description: |
+        Returns all events that match the filter parameters.
+
+        Possible values for parameters `minStartDate` and `maxStartDate` are either
+         - a date without a time like `2022-11-16`
+         - or a datetime including a zone like `2022-11-16T15:00:00Z` (UTC) or `2022-11-16T15:00:00+02:00` (datetime with offset).
+
+        `maxStartDate` has to be after `minStartDate` or a bad request error is thrown.
+
+        ## Event types
+        Every returned event is of one of the following types (see `eventType` attribute):
+         - **update:** A single event which is not part of an series.
+         - **seriesMaster:** A seriesMaster holds the actual data of `occurrence` events. A seriesMaster object always comes with either multiple `occurrence` or `exception` events.
+         - **occurrence:** Occurrences represent the individual events of a series. Other than start, endtime and ids they don't contain any data. A client has to refer to its seriesMaster to
+        display further data e.g. its subject (using its `masterId`).
+         - **exception:** Exceptions represent an outliner event of an series. Other than occurrences `exception` events contain all information in itself. They still contain a reference to its master.
+         - **delete:** Represents the deletion of an event/series. The `eventId` either points to an `update` or `seriesMaster` id. The deletion of an `occurence` or `exception` event never
+        triggers a `delete` event.
+
+        ## Some notes on series
+        Special attention has to be payed when event series are involved. There are the following different use cases concerning series:
+         - **Series master has been modified**: In this case not only the modified `seriesMaster` but also ever `occurrence` and `exception` for that series is returned.
+         - **Complete series has been deleted:** If this is the case a `delete` event is returned containing the **seriesMaster** `eventId`. A client has to find all **occurrence and exception** events
+        pointing to that seriesMaster and delete them.
+         - **A single occurrence/exception in a series has been deleted:** If this is the case the API returns the series master and every occurrence/exception except the deleted one. There is no
+        `delete` event for occurrence/exception events!
+         - **A single occurrence in a series has been modified:** In this case the occurrence is now called a **exception**. The API again returns the series master, every occurence and a exception.
+
+        ## Pagination
+        Pagination is activated by sending the `paged=true` query parameter. A typical round of paginated requests works as follows:
+        - The first request either returns a `deltaToken` or `skipToken`.
+        - If the first request returned a `skipToken` the pagination can be continued by sending the `skipToken` to the API.
+          - Continue sending `skipToken` until a `deltaToken` is returned. This marks the end of the pagination. You have then fetched all new events. It is not required to send both a `deltaToken`
+        and `skipToken`.
+        - If the first request returned a `deltaToken` every event has already been fetched and further requests are not required.
+
+        Both `deltaToken` and `skipToken` should always be saved somewhere so they can be used for later requests.
+
+        ## Error types
+        | Type  | Description | HTTP Status |
+        |---|---|---|
+        | https://othr.de/error/event/InvalidSyncToken | A invalid/outdated `deltaToken` or `skipToken` has been sent to the <a href="/#operation/queryEvents">List Events</a> endpoint. Try querying again without a deltaToken/skipToken to get a new one. | 400 Bad Request |
+      parameters:
+        - name: minStartDate
+          required: true
+          description: "Lower bound (inclusive) for an event's start time to filter by."
+          allowEmptyValue: false
+          in: 'query'
+          schema:
+            type: string
+          example: "2022-11-06"
+        - name: maxStartDate
+          required: true
+          description: "Upper bound (inclusive) for an event's start time to filter by."
+          allowEmptyValue: false
+          in: 'query'
+          schema:
+            type: string
+          example: "2022-11-16T15:00:00Z"
+        - name: deltaToken
+          required: false
+          description: "Token that specifies the current state of the calendar. When passed only events which have been created, updated or deleted after this token has been issued will be returned."
+          allowEmptyValue: false
+          in: 'query'
+          schema:
+            type: string
+          example: 5z4RBJYliDxifH5LvVf213oEke0AACv9M1EBAAAA
+        - name: skipToken
+          required: false
+          description: "Token that specifies the current page of the calendar state. When passed the next page of the deltaToken state is fetched from the server. Only filled if the request had
+          `paged` set."
+          allowEmptyValue: false
+          in: 'query'
+          schema:
+            type: string
+          example: 5z4RBJYliDxifH5LvVf213oEke0AACv9M1EBAAAA
+        - name: paged
+          required: false
+          description: "Activates pagination."
+          allowEmptyValue: false
+          in: 'query'
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: succesful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventQueryResult'
+              examples:
+                EventQueryResult:
+                  $ref: '#/components/examples/EventQueryResult'
+        '400':
+          description: InvalidSyncToken
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  "/v1/eventcalendar/organizer":
+    get:
+      tags:
+        - EventCalendar
+      operationId: organizers
+      summary: List organizers
+      description: Returns all registered organizers
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Organizer'
+
+  "/v1/faculty":
+    get:
+      tags:
+        - Faculty
+      summary: List Faculties
+      description: Returns a list of all available faculties and their feeds.
+      operationId: faculties
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Faculty"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'localhost:8080/v1/faculty' -H 'Accept: application/json'
+  "/v1/faculty/{identifier}":
+    get:
+      tags:
+        - Faculty
+      summary: Find Faculty by identifier
+      description: Retrieve a single faculty filtered by the given identifier.
+      operationId: faculty
+      parameters:
+        - name: identifier
+          in: path
+          description: Identifier of the faculty
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Faculty found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FacultyDetail"
+        '404':
+          description: Faculty not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                404Error:
+                  $ref: "#/components/examples/404Error"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'localhost:8080/v1/faculty/ANK' -H 'Accept: application/json'
+  "/v1/faculty/{identifier}/lectures":
+    get:
+      tags:
+        - Faculty
+      summary: List Lectures of a Faculty
+      description: Retrieves all Lectures of a Faculty
+      operationId: facultyLectures
+      parameters:
+        - name: identifier
+          in: path
+          description: Identifier of the faculty to return
+          required: true
+          schema:
+            type: string
+            example: "IM"
+        - name: startDate
+          in: query
+          description: Filter Lectures that take place after this start date. If left out, the current semesters start date will be used.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-10-16"
+        - name: endDate
+          in: query
+          description: Filter Lectures that take place before this end date. If left out, the current semesters end date will be used.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-11-16"
+      responses:
+        '200':
+          description: Faculty Lectures found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Lecture"
+        '404':
+          description: Faculty not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                404Error:
+                  $ref: "#/components/examples/404Error"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'localhost:8080/v1/faculty/IM/lectures' -H 'Accept: application/json'
+
+  "/v1/university/info":
+    get:
+      tags:
+        - University
+      summary: Get University information
+      description: |
+        Gets all useful information about this university.
+
+        Result might be a cached value.
+      operationId: info
+      responses:
+        '200':
+          description: University information retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UniversityInfo"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'https://im-vm-031.othr.de/v1/university/info' -H 'Accept: application/json'
+  "/v1/university/room":
+    get:
+      tags:
+        - University
+      summary: List University Rooms
+      operationId: rooms
+      responses:
+        '200':
+          description: University rooms retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Room"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'https://im-vm-031.othr.de/v1/university/room' -H 'Accept: application/json'
+  "/v1/semester/{id}/lectures":
+    get:
+      tags:
+        - Semester
+      summary: Get Lectures
+      description: |
+        Gets all lectures of a semester.
+
+        Returns only lecture IDs. See the <a href="/#operation/info">university information endpoint</a> to get complete lecture data.
+
+        ### Further notes
+        This data is computed by extracting each lecture from the current semesters timetable and **might be incomplete**.
+      operationId: semesterLectures
+      parameters:
+        - name: id
+          in: path
+          description: Id of a semester
+          required: true
+          schema:
+            type: integer
+            example: 19578
+        - name: startDate
+          in: query
+          description: Filter Lectures that take place after this start date. If left out, the current semesters start date will be used.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-10-16"
+        - name: endDate
+          in: query
+          description: Filter Lectures that take place before this end date. If left out, the current semesters end date will be used.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-11-16"
+      responses:
+        '200':
+          description: Semester lectures retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Lecture"
+        '404':
+          description: Semester not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                404Error:
+                  $ref: "#/components/examples/404Error"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'https://im-vm-031.othr.de/v1/semester/7840/lectures' -H 'Accept: application/json'
+  "/v1/semester/{id}/timetable":
+    get:
+      tags:
+        - Semester
+      summary: Get Timetable
+      description: |
+        Gets the timetable for a semester in the given time period. If either `startDate` or `endDate` are missing the current semesters start and end date are used.
+
+        Result is ordered by `startDateTime`.
+      operationId: semesterTimetable
+      parameters:
+        - name: id
+          in: path
+          description: Id of a semester
+          required: true
+          schema:
+            type: integer
+        - name: startDate
+          in: query
+          description: Start date for the requested timetable.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-10-16"
+        - name: endDate
+          in: query
+          description: End date for the requested timetable.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-11-16"
+      responses:
+        '200':
+          description: Semester lectures retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TimetableItem"
+        '404':
+          description: Semester not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                404Error:
+                  $ref: "#/components/examples/404Error"
+      x-codeSamples:
+        - lang: 'Shell'
+          label: Default
+          source: |
+            # Timetable for Semester MIN (7840) for the current semesters time period.
+            curl -X GET 'https://im-vm-031.othr.de/v1/semester/7840/timetable' \
+                -H 'Accept: application/json'
+        - lang: 'Shell'
+          label: Custom date
+          source: |
+            # Timetable for Semester MIN (7840) for a custom time period.
+            curl -X GET 'https://im-vm-031.othr.de/v1/semester/7840/timetable?startDate=2022-10-16&endDate=2022-11-16' \
+                -H 'Accept: application/json'
+
+  "/v1/timetable/lectures/{id}":
+    get:
+      tags:
+        - Timetable
+      operationId: timetableLecture
+      summary: Get lecture information and occurrences by id
+      description: |
+        Get all available information for the given lecture and list the upcomming unique occurrences (= timetable items
+        that share the same lecture/subject, day of week and timeslot) of the lecture during a time period specified by
+        ``startDate`` and ``endDate``.
+
+        See the ``/v1/faculty/{identifier}/lectures`` endpoint for a list of all lectures with their respective Ids.
+
+        A lecture can be hold in different semesters, so by specifying a ``semesterId``, only occurrences for that semester are returned.
+
+        See the ``/v1/timetable/lectures/{id}/semesters`` endpoint for a list of all semesters that offer the given lecture.
+      parameters:
+        - name: id
+          in: path
+          description: Id of a lecture
+          required: true
+          schema:
+            type: integer
+            example: 5297
+        - name: semesterId
+          in: query
+          description: Id of a semester to filter the unique occurrences. If left out, unique occurrences for all semesters are returned.
+          required: false
+          schema:
+            type: integer
+            example: 19578
+        - name: startDate
+          in: query
+          description: Start date for the unique occurrences. If left out, todays date will be used.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-10-16"
+        - name: endDate
+          in: query
+          description: End date for the unique occurrences. If left out, the current semesters end date will be used.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-11-16"
+      responses:
+        '200':
+          description: Lecture information retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TimetableLecture"
+        '404':
+          description: Lecture not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                404Error:
+                  $ref: "#/components/examples/404Error"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'https://im-vm-031.othr.de/v1/timetable/lectures/8726' -H 'Accept: application/json'
+
+  "/v1/timetable/lectures/{id}/semesters":
+    get:
+      tags:
+        - Timetable
+      operationId: timetableLectureSemesters
+      summary: Get semesters for a lecture by id
+      description: |
+        Get all semesters (Studiengang) that offer the given lecture in the time period specified by ``startDate`` and ``endDate``.
+      parameters:
+        - name: id
+          in: path
+          description: Id of a lecture
+          required: true
+          schema:
+            type: integer
+            example: 5297
+        - name: startDate
+          in: query
+          description: Start date of the time period. If left out, todays date will be used.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-10-16"
+
+        - name: endDate
+          in: query
+          description: End date of the time period. If left out, the current semesters end date will be used.
+          required: false
+          schema:
+            type: string
+            format: date
+            example: "2022-11-16"
+      responses:
+        '200':
+          description: Semester information retrieved
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Semester"
+        '404':
+          description: Lecture not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                404Error:
+                  $ref: "#/components/examples/404Error"
+        x-codeSamples:
+          - lang: 'curl'
+            source: |
+              curl -X GET 'https://im-vm-031.othr.de/v1/timetable/lectures/8726/semesters' -H 'Accept: application/json'
+
+  "/v1/jobmarket":
+    get:
+      tags:
+        - JobMarket
+      summary: List Job Market information
+      description: |
+        Lists information about the Job Market.
+
+        Use information to filter for jobs using the <a href="/#operation/jobs">List Jobs endpoint</a>.
+      operationId: jobmarket
+      responses:
+        '200':
+          description: Job Market information found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/JobMarket"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'localhost:8080/v1/jobmarket' -H 'Accept: application/json'
+  "/v1/jobmarket/job":
+    post:
+      tags:
+        - JobMarket
+      summary: List Jobs
+      description: |
+        Retrieve Jobs based on query options.
+
+        For possible values to filter, see <a href="/#operation/faculties">Faculties</a> and <a href="/#operation/jobmarket">JobMarket</a> endpoints.
+      operationId: jobs
+      requestBody:
+        description: Job query options
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/JobQuery"
+      responses:
+        '200':
+          description: Jobs found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Job"
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                404Error:
+                  $ref: "#/components/examples/404Error"
+  "/v1/jobmarket/job/{id}":
+    get:
+      tags:
+        - JobMarket
+      summary: Find Job by id
+      description: Retrieve a single Job filtered by its id.
+      operationId: jobById
+      parameters:
+        - name: id
+          in: path
+          description: Id of the Job to return
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Job found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/JobDetails"
+        '404':
+          description: Job not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              examples:
+                404Error:
+                  $ref: "#/components/examples/404Error"
+      x-codeSamples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'localhost:8080/v1/jobmarket/job/656841' -H 'Accept: application/json'
+  "/v1/jobmarket/new":
+    get:
+      tags:
+        - JobMarket
+      summary: New Jobs
+      description: |
+        Retrieve a estimate of new Jobs since a given date. The resulting count is caped at 100.
+
+        Result might be a cached value and not 100% accurate.
+      operationId: newJobs
+      parameters:
+        - name: since
+          in: query
+          description: Date to start counting (inclusive)
+          required: true
+          example: "2022-11-16"
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: Successfully got Job count
+          content:
+            application/json:
+              schema:
+                type: integer
+                example: 42
+                maximum: 100
+                description: New Job count
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+              example:
+                timestamp: "2022-11-16T10:06:44.081+00:00"
+                status: 400
+                error: "Bad Requestr"
+                message: "Parameter since should be today or in the past."
+                path: "/v1/jobmarket/job/new"
+  "/v1/freerooms":
+    get:
+      tags:
+        - RoomFinder
+      summary: List free rooms
+      description: |
+        Gets all free rooms for a given filter.
+
+        For possible filter values for `equipment` and `building` see the `roomFinderFilter` attribute of the <a href="/#operation/info">university information endpoint</a> result.
+      operationId: freeRooms
+      parameters:
+        - in: query
+          name: start
+          schema:
+            type: string
+            pattern: "^((\\d\\d:\\d\\d)(:\\d\\d)?)|(now)$"
+            example:
+              - "08:00"
+              - "now"
+          description: Start time from which free rooms are to be searched. Can either be a time like `08:00` for a concrete time or `now` for the current time.
+        - in: query
+          name: date
+          schema:
+            type: string
+            format: date
+            example: "2022-11-27"
+          description: Date from which free rooms are to be searched. Needs to be between the current date and the next 7 days. If `null` the current date is used.
+        - in: query
+          name: end
+          schema:
+            type: string
+            pattern: "^\\d\\d:\\d\\d$"
+            example: "20:00"
+          description: End time until which free rooms should be searched.
+        - in: query
+          name: building
+          schema:
+            type: string
+            example: "K"
+          description: Letter of the building to be searched. If omited, rooms in every building are searched.
+        - in: query
+          name: equipment
+          schema:
+            type: array
+            example: 1
+            items:
+              type: integer
+          description: Ids of equipment to filter. A room has to have one of the requested equipment to be returned.
+        - in: query
+          name: roomType
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/RoomType"
+          description: Types of room to be searched for.
+      responses:
+        '200':
+          description: Buildings with free rooms retrieved.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/FreeRoomBuilding"
+      x-code-samples:
+        - lang: 'curl'
+          source: |
+            curl -X GET 'https://im-vm-031.othr.de/v1/freerooms?start=now&building=K&date=2022-10-22&roomType=Hoersaal,CIP%20Pool' -H 'Accept: application/json'
+  "/v1/feedback":
+    post:
+      tags:
+        - Feedback
+      summary: Provide Feedback
+      description: Posts a new feedback entry (sent via email to a mailing list)
+      operationId: feedback
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FeedbackItem"
+      responses:
+        '202':
+          description: accepted
+        '500':
+          description: other Exception
+        '504':
+          description: IOException
+  "/v1/candidates":
+    get:
+      tags:
+        - Election
+      summary: "Returns all candidates for the latest election."
+      responses:
+        '200':
+          description: "All available candidates."
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Candidate"
+      operationId: getCandidates
+    post:
+      tags:
+        - Election
+      summary: "Create a new candidate."
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: "#/components/schemas/CandidatePayload"
+      responses:
+        '200':
+          description: "Created"
+          content:
+            text/plain:
+              schema:
+                type: string
+                description: the id of the created candidate
+                example: 4
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+      operationId: createCandidate
+      security:
+        - ApiKeyAuth: []
+  "/v1/candidates/{candidateId}":
+    get:
+      parameters:
+        - name: candidateId
+          in: path
+          required: true
+          description: "The id of the candidate to retrieve."
+          schema:
+            type: integer
+      tags:
+        - Election
+      summary: "Returns a candidate of an election"
+      responses:
+        '200':
+          description: "A candidate object."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Candidate"
+        '404':
+          $ref: '#/components/responses/NotFound'
+      operationId: getCandidateById
+    put:
+      parameters:
+        - name: candidateId
+          in: path
+          required: true
+          description: "The id of the candidate to update."
+          schema:
+            type: integer
+      tags:
+        - Election
+      summary: "Update an existing candidate."
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: "#/components/schemas/Candidate"
+      responses:
+        '200':
+          description: "Candidate was updated."
+        '304':
+          $ref: '#/components/responses/NotModified'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+      operationId: updateCandidate
+      security:
+        - ApiKeyAuth: []
+    delete:
+      parameters:
+        - name: candidateId
+          in: path
+          required: true
+          description: "The id of the candidate to retrieve."
+          schema:
+            type: integer
+      tags:
+        - Election
+      summary: "Delete a candidate."
+      responses:
+        '200':
+          description: "Candidate deleted."
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+      operationId: deleteCandidate
+      security:
+        - ApiKeyAuth: []
+  "/v1/candidates/{candidateId}/image":
+    get:
+      parameters:
+        - name: candidateId
+          in: path
+          required: true
+          description: "The id of the candidate."
+          schema:
+            type: integer
+      tags:
+        - Election
+      summary: "Returns the image of a candidate."
+      responses:
+        '200': # Response
+          description: OK
+          content: # Response body
+            image/*: # Media type
+              schema:
+                type: string
+                format: binary
+        '404':
+          $ref: '#/components/responses/NotFound'
+      operationId: getImageOfCandidate
+    post:
+      parameters:
+        - name: candidateId
+          in: path
+          required: true
+          description: "The id of the candidate."
+          schema:
+            type: integer
+      tags:
+        - Election
+      summary: "Updates the image of a candidate"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - file
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: "Created"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+      operationId: uploadPictureOfCandidate
+      security:
+        - ApiKeyAuth: []
+  "/v1/election":
+    get:
+      tags:
+        - Election
+      summary: "Returns the election information of the latest election."
+      responses:
+        '200':
+          description: "A candidate object."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ElectionInfo"
+        '404':
+          $ref: '#/components/responses/NotFound'
+      operationId: getElectionInfo
+    post:
+      tags:
+        - Election
+      summary: "Creates or updates the election information."
+      description: Contains the necessary data for an election. Newlines and '\\n' can be used and will be normalized to '\\n' (no '\\r')
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: "#/components/schemas/ElectionInfo"
+      responses:
+        '200':
+          description: "Created or updated new election information."
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+      operationId: createElectionInfo
+      security:
+        - ApiKeyAuth: []
+    delete:
+      tags:
+        - Election
+      summary: "Delete the latest election information."
+      responses:
+        '200':
+          description: "Deleted latest election information."
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+      operationId: deleteElectionInfo
+      security:
+        - ApiKeyAuth: []
+
+components:
+  securitySchemes:
+    ApiKeyAuth:        # arbitrary name for the security scheme
+      type: apiKey
+      in: header       # can be "header", "query" or "cookie"
+      name: X-API-KEY  # name of the header, query parameter or cookie
+
+  responses:
+    NotFound:
+      description: The specified resource was not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotModified:
+      description: The specified resource was not modified, because nothing changed
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Unauthorized, specify an api token in the header 'X-API-KEY'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+  schemas:
+    Error:
+      type: object
+      description: RFC 7807 compliance error.
+      properties:
+        type:
+          type: string
+          example: https://othr.de/error/event/InvalidSyncToken
+          description: A URI reference that identifies the problem type.
+        title:
+          type: string
+          example: Invalid deltaToken.
+          description: A short, human-readable summary of the problem type.
+        status:
+          type: integer
+          example: 400
+          description: The HTTP status code generated by the origin server for this occurrence of the problem.
+        detail:
+          type: string
+          example: The provided deltaToken is not valid anymore.
+          description: A human-readable explanation specific to this occurrence of the problem.
+    Faculty:
+      type: object
+      properties:
+        identifier:
+          type: string
+          example: "IM"
+          description: A short representation of the faculty's name. Uniquely identifies a faculty.
+          minLength: 1
+          maxLength: 3
+        name:
+          example: "Informatik und Mathematik"
+          type: string
+          minLength: 1
+          description: The complete faculty's name.
+        color:
+          type: string
+          example: "4A78D3"
+          pattern: "[\\dA-F]{6}"
+          maxLength: 6
+          nullable: true
+          description: A faculty's color in hex.
+        feeds:
+          type: array
+          description: The Faculty's RSS feeds.
+          items:
+            $ref: "#/components/schemas/Feed"
+      required:
+        - identifier
+        - name
+    FacultyDetail:
+      properties:
+        identifier:
+          type: string
+          example: "IM"
+          description: A short representation of the faculty's name. Uniquely identifies a faculty.
+          minLength: 1
+          maxLength: 3
+        name:
+          example: "Informatik und Mathematik"
+          type: string
+          minLength: 1
+          description: The complete faculty's name.
+        color:
+          type: string
+          example: "4A78D3"
+          pattern: "[\\dA-F]{6}"
+          maxLength: 6
+          nullable: true
+          description: A faculty's color in hex.
+        feeds:
+          type: array
+          description: The Faculty's RSS feeds.
+          items:
+            $ref: "#/components/schemas/Feed"
+        semesters:
+          type: array
+          description: The Faculty's Semesters.
+          items:
+            $ref: "#/components/schemas/Semester"
+        lecturer:
+          type: array
+          description: The Faculty's Lecturers.
+          items:
+            $ref: "#/components/schemas/Lecturer"
+      required:
+        - identifier
+        - name
+        - semesters
+        - lecturer
+        - feeds
+        - semesters
+    Feed:
+      type: object
+      properties:
+        rss:
+          type: string
+          description: RSS feed URI
+          example: "https://www.oth-regensburg.de/fakultaeten/informatik-und-mathematik/schwarzes-brett/rss.xml"
+        type:
+          type: string
+          description: Type of the RSS feed.
+          enum:
+            - "BULLETIN_BOARD"
+      required:
+        - rss
+        - type
+      description: A faculty's RSS Feed.
+    FeedbackItem:
+      type: object
+      properties:
+        category:
+          type: string
+          enum: [ Bug, Feedback, Idee ]
+        message:
+          type: string
+        contactAddress:
+          type: string
+        images:
+          type: array
+          minItems: 0
+          maxItems: 3
+          items:
+            type: string
+            format: base64
+            description: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWBAMAAADOL2zRAAAAG1BMVEXMzMyWlpaqqqq3t7fFxcW+vr6xsbGjo6OcnJyLKnDGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABAElEQVRoge3SMW+DMBiE4YsxJqMJtHOTITPeOsLQnaodGImEUMZEkZhRUqn92f0MaTubtfeMh/QGHANEREREREREREREtIJJ0xbH299kp8l8FaGtLdTQ19HjofxZlJ0m1+eBKZcikd9PWtXC5DoDotRO04B9YOvFIXmXLy2jEbiqE6Df7DTleA5socLqvEFVxtJyrpZFWz/pHM2CVte0lS8g2eDe6prOyqPglhzROL+Xye4tmT4WvRcQ2/m81p+/rdguOi8Hc5L/8Qk4vhZzy08DduGt9eVQyP2qoTM1zi0/uf4hvBWf5c77e69Gf798y08L7j0RERERERERERH9P99ZpSVRivB/rgAAAABJRU5ErkJggg=="
+        additionalInfo:
+          type: object
+          additionalProperties:
+            type: string
+      required:
+        - category
+        - message
+    EventQueryResult:
+      type: object
+      properties:
+        deltaToken:
+          type: string
+          description: Token that specifies the current state of the calendar. When passed to /v1/eventcalendar/event, only new, updated or deleted events added after this request will be returned.
+          example: 5z4RBJYliDxifH5LvVf213oEke0AACv9M1EBAAAA
+        skipToken:
+          type: string
+          description: Token that provides access to the next page of a paginated event query.
+          example: 5z4RBJYliDxifH5LvVf213oEke0AACv9M1EBAAAA
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/Event'
+          description: The events that have changed and match the filters since the deltaToken transmitted in the requests. If no token was transmitted, it simply contains all filtered events.
+      required:
+        - events
+    Category:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the category. Uniquely identifies a category.
+          example: "Party"
+        color:
+          type: string
+          pattern: "[\\dA-F]{6}"
+          maxLength: 6
+          nullable: true
+          description: A Category's color in hex.
+      required:
+        - id
+        - name
+    EventType:
+      type: string
+      description: The type of a calendar event.
+      enum:
+        - "delete"
+        - "update"
+        - "occurrence"
+        - "exception"
+        - "seriesMaster"
+    Event:
+      properties:
+        eventId:
+          type: string
+          description: Unique event ID.
+          example: "AAMkAGI28tEyDAAA="
+        eventType:
+          $ref: '#/components/schemas/EventType'
+      required:
+        - eventType
+        - eventId
+      discriminator:
+        propertyName: eventType
+        mapping:
+          delete: "#/components/schemas/DeleteEvent"
+          update: "#/components/schemas/UpdateEvent"
+          occurrence: "#/components/schemas/OccurrenceEvent"
+          exception: "#/components/schemas/ExceptionEvent"
+          seriesMaster: "#/components/schemas/SeriesMaster"
+    BaseEventData:
+      properties:
+        name:
+          type: string
+          description: Name of the event
+          example: "OTH-Fest"
+        categories:
+          type: array
+          items:
+            type: string
+            example: "Party"
+        startTime:
+          type: string
+          description: Start time of the event/series in Europe/Berlin timezone.
+          example: "2022-11-16T19:00:00"
+        endTime:
+          type: string
+          description: End time of the event/series in  Europe/Berlin timezone.
+          example: "2022-11-16T22:00:00"
+        isAllDay:
+          type: boolean
+          description: True if the event takes the whole day
+          example: true
+        location:
+          type: string
+          description: String describing the location of the event (no actual coordinates)
+          example: K004
+        organizer:
+          $ref: '#/components/schemas/Organizer'
+        description:
+          type: string
+          description: (HTML) description of the event
+          example: "There will be much beer and cool music"
+      required:
+        - name
+        - categories
+        - startTime
+        - endTime
+        - isAllDay
+    UpdateEvent:
+      allOf:
+        - $ref: '#/components/schemas/Event'
+        - $ref: '#/components/schemas/BaseEventData'
+    DeleteEvent:
+      allOf:
+        - $ref: '#/components/schemas/Event'
+    OccurrenceEvent:
+      allOf:
+        - $ref: '#/components/schemas/Event'
+        - type: object
+          properties:
+            masterId:
+              type: string
+              description: ID of the associated series master event.
+            startTime:
+              type: string
+              description: Start time of the event in Europe/Berlin timezone.
+              example: "2022-11-16T19:00:00"
+            endTime:
+              type: string
+              description: End time of the event in  Europe/Berlin timezone.
+              example: "2022-11-16T22:00:00"
+          required:
+            - masterId
+            - startTime
+            - endTime
+            - eventType
+    ExceptionEvent:
+      allOf:
+        - $ref: '#/components/schemas/Event'
+        - $ref: '#/components/schemas/BaseEventData'
+        - type: object
+          properties:
+            masterId:
+              type: string
+              description: ID of the associated series master event.
+          required:
+            - masterId
+    SeriesMaster:
+      allOf:
+        - $ref: '#/components/schemas/Event'
+        - $ref: '#/components/schemas/BaseEventData'
+        - type: object
+    Organizer:
+      type: object
+      properties:
+        email:
+          type: string
+          description: E-Mail address of the organizer. Uniquely identifies a organizer.
+          example: "fachschaft_im@oth-regensburg.de"
+        name:
+          type: string
+          description: Name of the organizer
+          example: Fachschaft IM
+        description:
+          type: string
+          description: Description of the organizer
+          example: "Der FSIM e.V. (FachSchaft Informatik Mathematik eingetragener Verein) ist ein gemeinnütziger Verein..."
+      required:
+        - email
+    WebUntisResource:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 2
+          description: Id of the resource
+      required:
+        - id
+    Room:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 863
+          description: Id of the Room
+        name:
+          type: string
+          example: "K001"
+          description: Name of the Room
+        longName:
+          type: string
+          example: "K001 (Hörsaal - 119 - IM)"
+          description: Name of the Room
+      required:
+        - id
+        - name
+        - longName
+    UniversityInfo:
+      type: object
+      properties:
+        holidays:
+          type: array
+          minItems: 0
+          items:
+            $ref: "#/components/schemas/Holiday"
+          description: A list of available holidays.
+        semesterPeriods:
+          type: array
+          description: A list of available semester periods.
+          minItems: 0
+          items:
+            type: object
+            nullable: false
+            description: Period of the current semester. Borders are inclusive.
+            properties:
+              name:
+                type: string
+                description: Arbitrary name of the semester period.
+                example: SoSe 2020
+                nullable: false
+              start:
+                type: string
+                format: 'date'
+                description: Start date of the semester period.
+                example: "2022-10-16"
+                nullable: false
+              end:
+                type: string
+                format: 'date'
+                description: End date of the semester period.
+                example: "2022-11-16"
+                nullable: false
+            required:
+              - name
+              - start
+              - end
+        roomFinderFilter:
+          type: object
+          description: Filters which can be used for the <a href="/#operation/freeRooms">RoomFinder endpoint</a>
+          properties:
+            buildings:
+              description: Available buildings. Values can be used for the `building` parameter.
+              type: array
+              items:
+                type: string
+                example: "K"
+            equipment:
+              description: Available room equipment. Values can be used for the `equipment` parameter.
+              type: array
+              items:
+                $ref: "#/components/schemas/Equipment"
+            roomTypes:
+              type: array
+              description: Available room tyes. Values can be used for the `roomType` parameter.
+              items:
+                $ref: "#/components/schemas/RoomType"
+          required:
+            - buildings
+            - equipment
+            - roomTypes
+      required:
+        - lectures
+        - semesters
+        - holidays
+        - semesterPeriods
+        - roomFinderFilter
+    Holiday:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Karfreitag"
+          description: "Short name of the holiday"
+        longName:
+          type: string
+          example: "Karfreitag"
+          description: "Long name of the holiday"
+        startDate:
+          type: string
+          example: "2022-10-16"
+          format: date
+          description: "Start date of the holiday."
+        endDate:
+          type: string
+          example: "2022-11-16"
+          format: date
+          description: "End date of the holiday."
+      required:
+        - id
+        - name
+        - longName
+        - startDate
+        - endDate
+    Lecture:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Id of the resource
+          example: 17815
+        name:
+          type: string
+          example: "Moderne Softwaretechniken"
+          description: Name of the Lecture.
+        shortName:
+          type: string
+          example: "MST"
+          description: Short name of the Lecture.
+      required:
+        - id
+        - name
+        - shortName
+    Semester:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Id of the resource
+          example: 7840
+        name:
+          type: string
+          description: Short name of the Semester
+          example: "MIN"
+        longName:
+          type: string
+          description: Long name of the Semester
+          example: "Master MIN"
+      required:
+        - id
+        - name
+        - longName
+    Lecturer:
+      type: object
+      required:
+        - id
+        - name
+        - longName
+      properties:
+        id:
+          type: integer
+          description: Id of the resource
+          example: 3785
+        name:
+          type: string
+          description: Short name of the Lectuer
+          example: "Hem"
+        foreName:
+          type: string
+          description: Forename of the Lecturer
+          example: "Markus"
+        longName:
+          type: string
+          description: Surname of the Lecturer
+          example: "Heckner"
+        title:
+          type: string
+          description: Title of the Lecturer
+          example: "Prof. Dr."
+    TimetableItem:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Id of the timetable item.
+          example: 72543
+        startDateTime:
+          type: string
+          format: 'date-time'
+          description: Start date time of the timetable occurrence.
+          example: "2022-11-16T15:15:00+01:00"
+        endDateTime:
+          type: string
+          format: 'date-time'
+          description: Start date time of the timetable occurrence.
+          example: "2022-11-16T16:45:00+01:00"
+        rooms:
+          type: array
+          items:
+            type: integer
+            description: Ids of the rooms where the lecture is located at.
+            example: 534
+        lecture:
+          type: integer
+          description: Id of the lecture.
+          example: 8726
+          nullable: true
+      required:
+        - id
+        - startDateTime
+        - endDateTime
+        - rooms
+    TimetableLecture:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Id of the lecture
+          example: 5257
+        name:
+          type: string
+          description: Name of the lecture
+          example: "Medieninformatik"
+        shortName:
+          type: string
+          description: Short name of the lecture
+          example: "MI"
+        uniqueOccurrences:
+          type: array
+          description: |
+            List of unique occurrences of the given lecture. Unique occurrences are defined by the same weekday
+            and timeslot. In most cases, there will be one occurrence representing the lecture slot and one or more
+            occurrences representing the slots for the exercises.
+          minItems: 0
+          items:
+            type: object
+            description: A unique occurrence of the lecture
+            properties:
+              nextStartDateTime:
+                type: string
+                format: "date-time"
+                description: Start date time of the first upcomming lecture for this lecture occurrence
+                example: "2022-11-16T15:15:00+01:00"
+              nextEndDateTime:
+                type: string
+                format: "date-time"
+                description: End date time of the first upcomming lecture for this lecture occurrence
+                example: "2022-11-16T16:45:00+01:00"
+              semesters:
+                type: array
+                description: Semesters (Studiengang) offering the lecture
+                items:
+                  $ref: "#/components/schemas/Semester"
+              rooms:
+                type: array
+                description: Rooms where lecture is given
+                items:
+                  $ref: "#/components/schemas/Room"
+              lecturers:
+                type: array
+                description: Lecturers giving the lecture
+                items:
+                  $ref: "#/components/schemas/Lecturer"
+            required:
+              - nextStartDateTime
+              - nextEndDateTime
+              - semesters
+              - rooms
+              - lecturers
+      required:
+        - id
+        - name
+        - shortName
+        - uniqueOccurrences
+    JobMarket:
+      type: object
+      properties:
+        industries:
+          type: array
+          description: A list of available Industries in the Job Market.
+          items:
+            $ref: "#/components/schemas/Industry"
+        jobtypes:
+          type: array
+          description: A list of available Job Types.
+          items:
+            $ref: "#/components/schemas/JobType"
+        countries:
+          type: array
+          description: A list of available countries to filter for.
+          items:
+            type: string
+            example: "Deutschland"
+        companies:
+          type: array
+          description: A list of available companies to filter for.
+          items:
+            type: string
+            example: "Siemens AG"
+      required:
+        - industries
+        - jobtypes
+        - countries
+        - companies
+    Industry:
+      type: object
+      description: Industry for a Job Offer
+      properties:
+        id:
+          type: integer
+          description: Id of the Industry
+          example: 20
+        identifier:
+          type: string
+          description: Identifer of the Industry
+          example: IT-Dienstleistung, EDV-Schulung
+      required:
+        - id
+        - identifier
+    JobType:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Id of the Job Type
+          example: 9
+        identifier:
+          type: string
+          description: Identifier of the Job Type
+          example: Praktikum im Studium
+      required:
+        - id
+        - identifier
+    Job:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 656841
+          description: Id of the Job
+        title:
+          type: string
+          description: Title of the Job Offer
+          example: Praktikant (W/M/D) Informatik BI/DWH
+        logo:
+          type: string
+          description: URL pointing at a logo
+          example: https://jobboerse.oth-regensburg.de/index.php/Logo/83edaab03ae9f17d62010322e2159d04.202017338648.jpeg
+        url:
+          type: string
+          description: URL pointing to the jobs PDF.
+          example: https://jobboerse.oth-regensburg.de/index.php/job/656841-Praktikant-WMD-Informatik-BIDWH-K%E4serei-Champignon-Hofmeister-GmbH-Co-KG
+        websiteUrl:
+          type: string
+          description: Job market URL
+          example: https://jobboerse.oth-regensburg.de/index.php/PDF/656841
+        company:
+          type: string
+          description: Company behind this Job Offer
+          example: Käserei Champignon Hofmeister GmbH & Co. KG
+          nullable: true
+        lat:
+          type: string
+          example: 47.779563799999998
+          description: Geographical latitute
+          nullable: true
+        lng:
+          type: string
+          description: Geographical longitude
+          example: 10.298254399999999
+          nullable: true
+        country:
+          type: string
+          description: Country where the Job is located at.
+          example: Deutschland
+          nullable: true
+        refreshDate:
+          type: string
+          format: date
+          description: Date of last refresh. A refresh indicates that a job is still up-to-date but does not imply a change of its content.
+          example: "2022-11-16"
+          nullable: true
+      required:
+        - id
+        - title
+        - logo
+        - url
+        - websiteUrl
+    JobDetails:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 656841
+          description: Id of the Job
+        title:
+          type: string
+          description: Title of the Job Offer
+          example: Praktikant (W/M/D) Informatik BI/DWH
+        logo:
+          type: string
+          description: URL pointing at a logo
+          example: https://jobboerse.oth-regensburg.de/index.php/Logo/83edaab03ae9f17d62010322e2159d04.202017338648.jpeg
+        url:
+          type: string
+          description: Job market URL
+          example: https://jobboerse.oth-regensburg.de/index.php/PDF/656841
+        websiteUrl:
+          type: string
+          description: Job market URL
+          example: https://jobboerse.oth-regensburg.de/index.php/job/656841-Praktikant-WMD-Informatik-BIDWH-K%E4serei-Champignon-Hofmeister-GmbH-Co-KG
+        creationDate:
+          type: string
+          format: date-time
+          description: Date time when this Job Offer has been created.
+          example: 2022-11-16 10:25:31.250
+        expiryDate:
+          type: string
+          format: date-time
+          description: Date time when this Job Offer expires.
+        text:
+          type: string
+          description: Additional text describing the Job Offer.
+          example: Some example text.
+        faculties:
+          type: array
+          description: List of faculties this Job applies to.
+          items:
+            type: string
+            example: IM
+        industries:
+          type: array
+          description: List of industries this Job applies to.
+          items:
+            type: integer
+            example: 20
+        company:
+          type: string
+          description: Company behind this Job Offer
+          example: Käserei Champignon Hofmeister GmbH & Co. KG
+          nullable: true
+        lat:
+          type: number
+          example: 47.779563799999998
+          description: Geographical latitute
+          nullable: true
+        lng:
+          type: number
+          description: Geographical longitude
+          example: 10.298254399999999
+          nullable: true
+        contactTitle:
+          type: string
+          description: Title of the person to contact.
+          nullable: true
+        contactForname:
+          type: string
+          description: Forname of the person to contact.
+          nullable: true
+          example: Chantal
+        contactSurname:
+          type: string
+          description: Surname of the person to contact.
+          example: Häring
+          nullable: true
+        contactEmail:
+          type: string
+          description: Email of the person to contact.
+          format: email
+          example: chantal.haering@champignon.de
+          nullable: true
+        country:
+          type: string
+          description: Country where the Job is located at.
+          example: Deutschland
+          nullable: true
+      required:
+        - id
+        - title
+        - logo
+        - url
+        - website
+        - creationDate
+        - text
+    JobQuery:
+      type: object
+      properties:
+        faculty:
+          description: Identifier of a Faculty. Filters for Jobs of that faculty.
+          type: string
+          example: IM
+          nullable: true
+        type:
+          description: Type of a Job. Filters for Jobs of that type. Multiple types are allowed.
+          type: array
+          items:
+            type: integer
+            example: 7
+          nullable: true
+        industry:
+          description: Industry of a Job. Filters for Jobs of that industry. Multiple industries are allowed.
+          type: array
+          items:
+            type: integer
+            example: 20
+          nullable: true
+        text:
+          description: "Additional text to search in Job Offers."
+          type: string
+          example: "SAP HANA"
+          nullable: true
+        country:
+          description: "Country where the Job is located at."
+          type: string
+          example: "Deutschland"
+          nullable: true
+        company:
+          description: "Company providing a Job Offer."
+          type: string
+          example: "Siemens AG"
+          nullable: true
+        location:
+          type: object
+          nullable: true
+          description: "Filters for jobs in a specific area."
+          properties:
+            lat:
+              type: number
+              description: "Latitude"
+              example: 49.0134297
+              minimum: 1
+            lng:
+              type: number
+              description: "Longitude"
+              example: 12.1016236
+              minimum: 1
+            radius:
+              type: integer
+              description: "Radius in km."
+              example: 100
+              minimum: 1
+          required:
+            - lat
+            - lng
+            - radius
+        since:
+          type: string
+          format: date
+          description: "Filter for Jobs after this date (inclusive)."
+          example: "2022-11-16"
+          nullable: true
+        max:
+          type: integer
+          description: "Maximum number of Job results."
+          example: 100
+          default: 100
+          minimum: 1
+          nullable: true
+    RoomType:
+      type: string
+      enum:
+        - Hoersaal
+        - CIP Pool
+    Equipment:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+          description: "Id of the room equipment."
+        name:
+          type: string
+          example: "A3 Drucker Schwarz/Weiß"
+          description: "Name of the equipment."
+        infos:
+          type: string
+          example: "4ct for page"
+          description: "Extra information about the device."
+      required:
+        - id
+        - name
+        - infos
+    FreeRoomBuilding:
+      type: object
+      properties:
+        letter:
+          type: string
+          minLength: 1
+          maxLength: 1
+          example: "K"
+          description: "Letter of the building."
+        faculties:
+          type: array
+          description: "Name of the building."
+          minItems: 1
+          items:
+            type: string
+        rooms:
+          type: array
+          minItems: 0
+          items:
+            $ref: "#/components/schemas/FreeRoom"
+          description: "A list of available and free rooms."
+        plans:
+          type: array
+          items:
+            type: object
+            properties:
+              floor:
+                type: integer
+                description: The buildings floor
+                example: 0
+              plan:
+                type: string
+                description: "URL pointing to a plan for the corresponding floor of the building."
+                example: "https://www.oth-regensburg.de/fileadmin/media/lageplaene/Galgenbergstr_32_K_EG_.pdf"
+      required:
+        - letter
+        - faculties
+        - rooms
+    FreeTime:
+      type: object
+      properties:
+        start:
+          type: string
+          example: "08:15"
+          description: "Start time when the room is free. A string `start` is returned representing the start of the day."
+        end:
+          type: string
+          example: "19:30"
+          description: "End time when the room is free. A string `end` is returned representing the end of the day."
+      required:
+        - start
+        - end
+    FreeRoom:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "K002"
+          description: "Short name of Room."
+        longName:
+          type: string
+          example: "K002 (Hörsaal -55 - IM)"
+          description: "Name of Room with description."
+        type:
+          $ref: "#/components/schemas/RoomType"
+          example: "Hörsaal"
+          description: "Type of a room."
+        equipment:
+          type: array
+          minItems: 0
+          items:
+            type: integer
+            example: 1
+          description: "List of room equipment."
+        times:
+          type: array
+          description: "List of objects with start and end times representing the times intervals at which a room is not occupied."
+          minItems: 1
+          items:
+            $ref: "#/components/schemas/FreeTime"
+        floor:
+          type: integer
+          example: 0
+          description: "Floor of the building the room is contained in. `null` if the floor could not be determined."
+      required:
+        - name
+        - longName
+        - type
+        - equipment
+        - times
+
+    Candidate:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: "Identification number of the candidate"
+          readOnly: true
+        firstName:
+          type: string
+          example: "Max"
+          description: "First name of the candidate."
+        lastName:
+          type: string
+          example: "Mustermann"
+          description: "Last name of the candidate."
+        course:
+          type: string
+          example: "Informatik"
+          description: "Course of studies the candidate applied to."
+        term:
+          type: integer
+          example: 5
+          description: "The term the candidate is currently graduating."
+        offices:
+          type: array
+          description: "A list of offices the candidate is running for."
+          minItems: 1
+          items:
+            type: string
+            enum:
+              - "Studentischer Konvent"
+              - "Senat"
+              - "Fakultaetsrat"
+        goals:
+          type: array
+          description: "The goals the candidate wants to achieve during his/her time in office."
+          items:
+            type: string
+        motto:
+          type: string
+          description: "The motto of the candidate."
+          example: "Make OTH great again"
+        faculty:
+          type: string
+          description: "The faculty of the candidate and his course."
+          enum:
+            - "ANK"
+            - "ARC"
+            - "ASG"
+            - "BAU"
+            - "BW"
+            - "EI"
+            - "IM"
+            - "MB"
+          example: "IM"
+      required:
+        - firstName
+        - lastName
+        - course
+        - term
+        - offices
+        - goals
+        - faculty
+    CandidatePayload:
+      allOf:
+        - $ref: "#/components/schemas/Candidate"
+        - type: object
+          properties:
+            file:
+              description: "Image of the candidate"
+              type: string
+              format: binary
+      required:
+        - firstName
+        - lastName
+        - course
+        - term
+        - offices
+        - goals
+        - faculty
+    ElectionInfo:
+      type: object
+      properties:
+        electionStart:
+          type: string
+          format: date
+          example: "2022-11-13"
+          description: "Date of the start of the election."
+        electionEnd:
+          type: string
+          format: date
+          example: "2022-11-16"
+          description: "Date of the end of the election."
+        startShowElectionInfo:
+          type: string
+          format: date
+          example: "2022-11-13"
+          description: "Date when to show the election info in the app."
+        endShowElectionInfo:
+          type: string
+          format: date
+          example: "2022-11-16"
+          description: "Date when to stop showing the election info."
+        howToVoteShort:
+          type: object
+          example: "Go somewhere and make your cross."
+          description: "Short description of how to vote."
+        howToVoteLong:
+          type: object
+          example: "Go somewhere and make your cross, described in detail."
+          description: "Detailed description of how to vote."
+        whatToVoteSenat:
+          type: object
+          example: "You can vote someone for senate."
+          description: "Description of voting for the senate."
+        whatToVoteKonvent:
+          type: object
+          example: "You can vote someone for the Studentischen Konvent."
+          description: "Description of voting for the Studentischen Konvent."
+        whatToVoteFaculty:
+          type: object
+          example: "You can vote someone for the Fakultätsrat."
+          description: "Description of voting for the Fakultätsrat."
+      required:
+        - electionStart
+        - electionEnd
+        - startShowElectionInfo
+        - endShowElectionInfo
+  examples:
+    UpdateEvent:
+      summary: Single Event Instance
+      description: Single Event Instance
+      value:
+        eventId: "AAMkAGI28tEyDAAA="
+        eventType: "update"
+        name: "OTH-Fest"
+        categories: [ "Party" ]
+        startTime: "2022-11-16T19:00:00"
+        endTime: "2022-11-16T22:00:00"
+        isAllDay: true
+        location: K004
+        organizer:
+          name: "Markus Heckner"
+          email: "markus.heckner@oth-regensburg.de"
+          description: "OTH Regensburg Professor"
+        description: "There will be much beer and cool music"
+    DeleteEvent:
+      summary: Single Event Instance of type delete.
+      description: Single Event Instance
+      value:
+        eventId: "AAMkAGI28tEyDAAA="
+        eventType: "delete"
+    EventQueryResult:
+      summary: Example of a events query
+      description: Result contains new, updated or deleted events and a deltaToken.
+      value:
+        deltaToken: "5z4RBJYliDxifH5LvVf213oEke0AACv9M1EBAAAA"
+        events:
+          - eventId: "AAMkAGI28tEyDAAA="
+            eventType: "update"
+            name: "OTH-Fest"
+            categories: [ "Party" ]
+            startTime: "2022-11-16T19:00:00"
+            endTime: "2022-11-16T22:00:00"
+            isAllDay: true
+            location: K004
+            organizer:
+              name: "Markus Heckner"
+              email: "markus.heckner@oth-regensburg.de"
+              description: "OTH Regensburg Professor"
+            description: "There will be much beer and cool music"
+          - eventId: "AAMkAGI28tEyDAAA="
+            eventType: "delete"
+          - eventId: "hYS05YjdkLWM5YmIyMjAyOGNkZABGAAAAAAAjrBl1DhKxSZPo"
+            eventType: "seriesMaster"
+            name: "Theater"
+            categories: [ "Veranstaltung" ]
+            startTime: "2022-11-16T19:00:00"
+            endTime: "2022-11-16T22:00:00"
+            isAllDay: false
+            location: K004
+            organizer:
+              name: "Markus Heckner"
+              email: "markus.heckner@oth-regensburg.de"
+              description: "OTH Regensburg Professor"
+            description: "A special theater experience waiting for you!"
+          - eventId: "AAMkADY0OGFhZGYwLWE3NjAtNDBhYS05YjdkLWM5YmIyMjAy"
+            masterId: "hYS05YjdkLWM5YmIyMjAyOGNkZABGAAAAAAAjrBl1DhKxSZPo"
+            eventType: "occurrence"
+            startTime: "2022-11-16T19:00:00"
+            endTime: "2022-11-16T22:00:00"
+          - eventId: "AAMkADY0OGFhZGYwLWE3NjAtNDBhYS05YjdkLUGSU"
+            masterId: "hYS05YjdkLWM5YmIyMjAyOGNkZABGAAAAAAAjrBl1DhKxSZPo"
+            eventType: "occurrence"
+            startTime: "2022-11-16T19:00:00"
+            endTime: "2022-11-16T22:00:00"
+          - eventId: "AAMkADY0OGFhZGYwLWE3NjAtNDBhYS05YjdkLWM5YmIyMjAyO"
+            masterId: "hYS05YjdkLWM5YmIyMjAyOGNkZABGAAAAAAAjrBl1DhKxSZPo"
+            eventType: "exception"
+            name: "Theater Sonderveranstaltung"
+            categories: [ ]
+            startTime: "2022-11-16T19:00:00"
+            endTime: "2022-11-16T22:00:00"
+            isAllDay: true
+            organizer:
+              name: "Markus Heckner"
+              email: "markus.heckner@oth-regensburg.de"
+              description: "OTH Regensburg Professor"
+            location: "K005"
+            description: "A special theater experience waiting for you! In K005 this time."
+    404Error:
+      description: A generic 404 Not Found error.
+      value:
+        title: Not Found.
+        status: 404
+        detail: Requested resource not found.

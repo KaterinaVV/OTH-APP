@@ -1,0 +1,86 @@
+{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "result": [
+    {
+      "id": 4,
+      "name": "A",
+      "longName": "Architektur"
+    },
+    {
+      "id": 8,
+      "name": "ANK",
+      "longName": "Angewandte Natur- und Kulturwissenschaften"
+    },
+    {
+      "id": 15,
+      "name": "AW",
+      "longName": "Allgemeinwissenschaften"
+    },
+    {
+      "id": 5,
+      "name": "BAU",
+      "longName": "Bauingenieurwesen"
+    },
+    {
+      "id": 14,
+      "name": "Bib",
+      "longName": "Bibliothek"
+    },
+    {
+      "id": 2,
+      "name": "BW",
+      "longName": "Betriebswirtschaft"
+    },
+    {
+      "id": 6,
+      "name": "EI",
+      "longName": "Elektro- und Informationstechnik"
+    },
+    {
+      "id": 10,
+      "name": "OTH",
+      "longName": "Hochschule"
+    },
+    {
+      "id": 7,
+      "name": "IM",
+      "longName": "Informatik und Mathematik"
+    },
+    {
+      "id": 3,
+      "name": "MB",
+      "longName": "Maschinenbau"
+    },
+    {
+      "id": 16,
+      "name": "RZ",
+      "longName": "Rechenzentrum"
+    },
+    {
+      "id": 1,
+      "name": "SOZ",
+      "longName": "Angewandte Sozial- und Gesundheitswissenschaften"
+    },
+    {
+      "id": 12,
+      "name": "ZWW",
+      "longName": "ZWW"
+    },
+    {
+      "id": 17,
+      "name": "ACS",
+      "longName": "Alumni Career Service"
+    },
+    {
+      "id": 18,
+      "name": "AM",
+      "longName": "Angewandte Natur- und Kulturwissenschaften"
+    },
+    {
+      "id": 19,
+      "name": "HS",
+      "longName": "Hochschule Regensburg"
+    }
+  ]
+}

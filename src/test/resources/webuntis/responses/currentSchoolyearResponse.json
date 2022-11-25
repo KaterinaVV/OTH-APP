@@ -1,0 +1,10 @@
+{
+  "jsonrpc": "2.0",
+  "id": "ID",
+  "result": {
+    "id": 22,
+    "name": "SoSe 2020",
+    "startDate": 20200316,
+    "endDate": 20200930
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "jsonrpc": "2.0",
+  "id": "ID",
+  "result": [
+    {
+      "id": 7781,
+      "name": "BBBW",
+      "longName": "berufsbegl. Ba BW",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7782,
+      "name": "BW1a",
+      "longName": "Bachelor BW1a",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ffffff",
+      "did": 2
+    },
+    {
+      "id": 7783,
+      "name": "BW1b",
+      "longName": "Bachelor BW1b",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7784,
+      "name": "BW1c",
+      "longName": "Bachelor BW1c",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7785,
+      "name": "BW1d",
+      "longName": "Bachelor BW1d",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7786,
+      "name": "BW2a",
+      "longName": "Bachelor BW2a",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7787,
+      "name": "BW2b",
+      "longName": "Bachelor BW2b",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7788,
+      "name": "BW2c",
+      "longName": "Bachelor BW2c",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7789,
+      "name": "BW2d",
+      "longName": "Bachelor BW2d",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7790,
+      "name": "BW2e",
+      "longName": "Bachelor BW2e",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7791,
+      "name": "BW2f",
+      "longName": "Bachelor BW2f",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7792,
+      "name": "BW3a",
+      "longName": "Bachelor BW3a",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7793,
+      "name": "BW3b",
+      "longName": "Bachelor BW3b",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7794,
+      "name": "BW3c",
+      "longName": "Bachelor BW3c",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7795,
+      "name": "BW3d",
+      "longName": "Bachelor BW3d",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7796,
+      "name": "BW4a",
+      "longName": "Bachelor BW4a",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7797,
+      "name": "BW4b",
+      "longName": "Bachelor BW4b",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7798,
+      "name": "BW4c",
+      "longName": "Bachelor BW4c",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7799,
+      "name": "BW4d",
+      "longName": "Bachelor BW4d",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7800,
+      "name": "BW5a",
+      "longName": "Bachelor BW5a",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7801,
+      "name": "BW5b",
+      "longName": "Bachelor BW5b",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7802,
+      "name": "BW5c",
+      "longName": "Bachelor BW5c",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7803,
+      "name": "BW5d",
+      "longName": "Bachelor BW5d",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7804,
+      "name": "BW6FI",
+      "longName": "Bachelor BW6FI",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7805,
+      "name": "BW6IM",
+      "longName": "Bachelor BW6IM",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7806,
+      "name": "BW6LO",
+      "longName": "Bachelor BW6LO",
+      "active": true,
+      "did": 2
+    },
+    {
+      "id": 7807,
+      "name": "BW6MA",
+      "longName": "Bachelor BW6MA",
+      "active": true,
+      "did": 2
+    }
+  ]
+}

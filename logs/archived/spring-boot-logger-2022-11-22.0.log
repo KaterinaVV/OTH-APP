@@ -1,0 +1,41 @@
+[30m2022-11-22 10:56:44,384[0;39m INFO [background-preinit]: HV000001: Hibernate Validator 6.1.6.Final
+[30m2022-11-22 10:56:44,390[0;39m INFO [restartedMain]: Starting OthAppServerApplication.App using Java 11.0.16 on ken-MacBook-Pro.local with PID 39716 (/Users/ken/Documents/oth-app-server-master/build/classes/kotlin/main started by ken in /Users/ken/.gradle/daemon/6.7)
+[30m2022-11-22 10:56:44,391[0;39m INFO [restartedMain]: No active profile set, falling back to default profiles: default
+[30m2022-11-22 10:56:44,433[0;39m INFO [restartedMain]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[30m2022-11-22 10:56:44,433[0;39m INFO [restartedMain]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[30m2022-11-22 10:56:46,133[0;39m INFO [restartedMain]: Tomcat initialized with port(s): 8080 (http)
+[30m2022-11-22 10:56:46,279[0;39m INFO [restartedMain]: Initializing ProtocolHandler ["http-nio-8080"]
+[30m2022-11-22 10:56:46,291[0;39m INFO [restartedMain]: Starting service [Tomcat]
+[30m2022-11-22 10:56:46,291[0;39m INFO [restartedMain]: Starting Servlet engine: [Apache Tomcat/9.0.41]
+[30m2022-11-22 10:56:46,370[0;39m INFO [restartedMain]: Initializing Spring embedded WebApplicationContext
+[30m2022-11-22 10:56:46,370[0;39m INFO [restartedMain]: Root WebApplicationContext: initialization completed in 1936 ms
+[30m2022-11-22 10:56:47,024[0;39m INFO [restartedMain]: HikariPool-1 - Starting...
+[30m2022-11-22 10:56:47,367[0;39m INFO [restartedMain]: HikariPool-1 - Start completed.
+[30m2022-11-22 10:56:48,302[0;39m INFO [restartedMain]: 
+
+Using generated security password: 4ca3d179-540f-40d4-91fa-3d79d4e419f2
+
+[30m2022-11-22 10:56:48,351[0;39m INFO [restartedMain]: Will secure Not [Or [Ant [pattern='/v1/candidates/**', POST], Ant [pattern='/v1/candidates/**', PUT], Ant [pattern='/v1/candidates/**', DELETE], Ant [pattern='/v1/election/**', POST], Ant [pattern='/v1/election/**', DELETE]]] with []
+[30m2022-11-22 10:56:48,374[0;39m INFO [restartedMain]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e9be62d, org.springframework.security.web.context.SecurityContextPersistenceFilter@728cf58, org.springframework.security.web.header.HeaderWriterFilter@711c0b54, org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter@6438cb18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7667cd1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a015de0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30bcda45, org.springframework.security.web.session.SessionManagementFilter@4770d41b, org.springframework.security.web.access.ExceptionTranslationFilter@58182581, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32b37755]
+[30m2022-11-22 10:56:48,381[0;39m INFO [restartedMain]: Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41dbac6, org.springframework.security.web.context.SecurityContextPersistenceFilter@74b55121, org.springframework.security.web.header.HeaderWriterFilter@1eb9b391, org.springframework.security.web.csrf.CsrfFilter@5d784dd5, org.springframework.security.web.authentication.logout.LogoutFilter@60c3390a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7803de38, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bf5df92, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fa45015, org.springframework.security.web.session.SessionManagementFilter@6bbcbf66, org.springframework.security.web.access.ExceptionTranslationFilter@34e70ba4]
+[30m2022-11-22 10:56:48,498[0;39m INFO [restartedMain]: Initializing ExecutorService 'applicationTaskExecutor'
+[30m2022-11-22 10:56:48,655[0;39m INFO [restartedMain]: Adding welcome page template: index
+[30m2022-11-22 10:56:49,030[0;39m INFO [restartedMain]: Flyway Community Edition 7.1.1 by Redgate
+[30m2022-11-22 10:56:49,085[0;39m INFO [restartedMain]: Database: jdbc:postgresql://localhost:5432/othapp (PostgreSQL 15.0)
+[30m2022-11-22 10:56:49,104[0;39m WARN [restartedMain]: Flyway upgrade recommended: org.flywaydb.core.internal.database.postgresql.PostgreSQLDatabaseType@3ae78d78 15.0 is newer than this version of Flyway and support has not been tested. The latest supported version of org.flywaydb.core.internal.database.postgresql.PostgreSQLDatabaseType@3ae78d78 is 13.
+[30m2022-11-22 10:56:49,338[0;39m INFO [restartedMain]: Successfully validated 10 migrations (execution time 00:00.119s)
+[30m2022-11-22 10:56:49,356[0;39m INFO [restartedMain]: Current version of schema "public": 20210514.1
+[30m2022-11-22 10:56:49,361[0;39m INFO [restartedMain]: Schema "public" is up to date. No migration necessary.
+[30m2022-11-22 10:56:49,460[0;39m INFO [restartedMain]: Initializing ExecutorService 'taskScheduler'
+[30m2022-11-22 10:56:49,472[0;39m INFO [restartedMain]: LiveReload server is running on port 35729
+[30m2022-11-22 10:56:49,477[0;39m INFO [restartedMain]: Exposing 4 endpoint(s) beneath base path '/actuator'
+[30m2022-11-22 10:56:49,587[0;39m INFO [restartedMain]: Starting ProtocolHandler ["http-nio-8080"]
+[30m2022-11-22 10:56:49,608[0;39m INFO [restartedMain]: Tomcat started on port(s): 8080 (http) with context path ''
+[30m2022-11-22 10:56:49,626[0;39m INFO [restartedMain]: Started OthAppServerApplication.App in 5.609 seconds (JVM running for 6.048)
+[30m2022-11-22 10:57:15,879[0;39m INFO [http-nio-8080-exec-1]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+[30m2022-11-22 10:57:15,880[0;39m INFO [http-nio-8080-exec-1]: Initializing Servlet 'dispatcherServlet'
+[30m2022-11-22 10:57:15,887[0;39m INFO [http-nio-8080-exec-1]: Completed initialization in 7 ms
+[30m2022-11-22 10:58:13,296[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'taskScheduler'
+[30m2022-11-22 10:58:13,298[0;39m INFO [SpringContextShutdownHook]: Shutting down ExecutorService 'applicationTaskExecutor'
+[30m2022-11-22 10:58:13,301[0;39m INFO [SpringContextShutdownHook]: HikariPool-1 - Shutdown initiated...
+[30m2022-11-22 10:58:13,306[0;39m INFO [SpringContextShutdownHook]: HikariPool-1 - Shutdown completed.

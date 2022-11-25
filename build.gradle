@@ -1,0 +1,188 @@
+import com.github.jk1.license.filter.LicenseBundleNormalizer
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'org.springframework.boot' version '2.4.1'
+    id 'nu.studer.jooq' version '5.2.1'
+    id 'org.flywaydb.flyway' version '7.8.2'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+    id 'org.jetbrains.kotlin.kapt' version '1.4.21'
+    id 'org.openapi.generator' version '5.1.1'
+    id 'com.github.jk1.dependency-license-report' version '1.16'
+    id 'org.jlleitschuh.gradle.ktlint' version '10.2.1'
+    id 'jacoco'
+    id 'de.jansauer.printcoverage' version '2.0.0'
+    id 'org.jetbrains.gradle.plugin.idea-ext' version "1.0"
+}
+apply plugin: 'io.spring.dependency-management'
+apply from: 'gradle/scripts/jooq.gradle'
+apply from: 'gradle/scripts/openapi.gradle'
+apply from: 'gradle/scripts/ktlint.gradle'
+apply from: 'gradle/scripts/jacoco.gradle'
+
+group = 'de.oth'
+
+def commitTag = System.getenv('CI_COMMIT_TAG')
+def commitSha = System.getenv('CI_COMMIT_SHORT_SHA')
+if (commitTag != null && !commitTag.isBlank()) {
+    project.version = commitTag
+} else if (commitSha != null && !commitSha.isBlank()) {
+    project.version = "commit." + commitSha
+} else {
+    project.version = "dev." + new Date().format('yyyyMMdd')
+}
+
+tasks.named('bootJar') {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version,
+                'Implementation-Vendor': 'Ostbayerische Technische Hochschule Regensburg'
+        )
+    }
+}
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileKotlin {
+    dependsOn generateJooq
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+compileTestKotlin {
+    dependsOn generateJooq
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
+processResources {
+    inputs.property('version', project.version.toString())
+
+    filesMatching('static/openapi.yaml') {
+        filter(ReplaceTokens, tokens: [version: project.version.toString()])
+    }
+}
+
+ext {
+    set('snippetsDir', file("build/generated-snippets"))
+}
+
+// https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#dependency-versions-properties
+// https://docs.spring.io/dependency-management-plugin/docs/current/reference/html/
+dependencyManagement {
+    dependencies {
+        dependency group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
+        dependency group: 'com.nhaarman.mockitokotlin2', name: 'mockito-kotlin', version: '2.2.0'
+        dependency group: 'org.zalando', name: 'problem-spring-web-starter', version: '0.26.2'
+    }
+}
+
+licenseReport {
+    outputDir = "$buildDir/licenses"
+    configurations = ['compile']
+    filters = [new LicenseBundleNormalizer(bundlePath: "$projectDir/license-normalizer-bundle.json")]
+    allowedLicensesFile = new File(projectDir, "allowed-licenses.json")
+    excludes = ['org.springframework.boot:spring-boot-dependencies', 'org.junit:junit-bom']
+}
+check.dependsOn(tasks.checkLicense)
+
+dependencies {
+    // Dev only
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // Annotation processors
+    kapt 'org.springframework.boot:spring-boot-configuration-processor'
+
+    // Kotlin
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    compile 'org.jetbrains.kotlin:kotlin-reflect'
+    compile 'com.fasterxml.jackson.module:jackson-module-kotlin'
+    compile 'com.fasterxml.jackson.module:jackson-module-afterburner'
+    compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core'
+
+    // Spring
+    compile 'org.springframework.boot:spring-boot-starter-cache'
+    compile 'org.springframework.boot:spring-boot-starter-jooq'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework.boot:spring-boot-starter-validation'
+    compile 'org.springdoc:springdoc-openapi-ui:1.5.8'
+    compile 'org.springdoc:springdoc-openapi-data-rest:1.5.8'
+    compile 'org.zalando:problem-spring-web-starter'
+
+    // Spring Sec
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.security:spring-security-test'
+
+    // Other
+    compile 'org.apache.httpcomponents:httpclient'
+    compile 'io.micrometer:micrometer-core'
+    compile 'io.micrometer:micrometer-registry-prometheus'
+    compile 'jakarta.validation:jakarta.validation-api'
+    compile 'com.github.ben-manes.caffeine:caffeine'
+    compile "org.jsoup:jsoup"
+
+    // Database
+    compile 'org.flywaydb:flyway-core'
+    compile 'org.postgresql:postgresql'
+    compile 'org.testcontainers:postgresql:1.15.3'
+    jooqGenerator 'org.postgresql:postgresql'
+    jooqGenerator 'org.testcontainers:postgresql:1.15.3'
+
+    // Test
+    testCompile('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testCompile 'com.nhaarman.mockitokotlin2:mockito-kotlin'
+    testCompile 'org.mockito:mockito-inline'
+    testCompile 'org.mockito:mockito-core'
+
+    jooqGenerator project(':jooq-generator')
+}
+
+test {
+    useJUnitPlatform()
+    jacoco {
+        destinationFile = file("${buildDir}/jacoco/test.exec")
+    }
+}
+
+sourceSets {
+    main {
+        kotlin {
+            srcDir 'build/generated-src/openapi'
+        }
+    }
+}
+
+bootRun {
+    // support passing -Dsystem.property=value to bootRun task
+    systemProperties = System.properties
+}
+
+springBoot {
+    // https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/#integrating-with-actuator
+    buildInfo {
+        properties {
+            time = null
+        }
+    }
+}
+
+idea {
+    module {
+        excludeDirs += file("db")
+        excludeDirs += file("logs")
+    }
+}

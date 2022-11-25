@@ -1,0 +1,71 @@
+def dbUrl = "jdbc:postgresql://localhost:5432/othapp"
+def dbUsername = 'sa'
+def dbPassword = 'password'
+
+flyway {
+    url = dbUrl
+    user = dbUsername
+    password = dbPassword
+}
+jooq {
+    configurations {
+        xml {
+            generationTool {
+                jdbc {
+                    driver = 'org.postgresql.Driver'
+                    url = dbUrl
+                    user = dbUsername
+                    password = dbPassword
+                }
+                generator {
+                    name = 'org.jooq.codegen.XMLGenerator'
+                    database {
+                        includes = '.*'
+                        excludes = 'Flyway.*'
+                        inputSchema = 'public'
+                    }
+                    target {
+                        packageName = 'state'
+                        directory = 'src/main/resources/jooq/generated'
+                    }
+                }
+            }
+        }
+        main {
+            generationTool {
+                generator {
+                    name = 'org.jooq.codegen.DefaultGenerator'
+                    strategy {
+                        name = 'jooq.PrefixGeneratorStrategy'
+                    }
+                    generate {
+                        relations = true
+                        records = true
+                        immutablePojos = true
+                        fluentSetters = true
+                        pojosEqualsAndHashCode = true
+                    }
+
+                    database {
+                        name = 'org.jooq.meta.xml.XMLDatabase'
+
+                        properties {
+                            property {
+                                key = 'dialect'
+                                value = 'POSTGRES'
+                            }
+                            property {
+                                key = 'xmlFile'
+                                value = 'src/main/resources/jooq/generated/state/information_schema.xml'
+                            }
+                        }
+                    }
+                    target {
+                        packageName = 'de.oth.othappserver'
+                    }
+                }
+            }
+        }
+    }
+}
+generateXmlJooq.dependsOn(flywayMigrate)

@@ -1,0 +1,1156 @@
+{
+    "jsonrpc": "2.0",
+    "id": "req-001",
+    "result": [
+        {
+            "id": 2217309,
+            "date": 20211202,
+            "startTime": 815,
+            "endTime": 945,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217314,
+            "date": 20211202,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217319,
+            "date": 20211209,
+            "startTime": 815,
+            "endTime": 945,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217324,
+            "date": 20211209,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217329,
+            "date": 20211216,
+            "startTime": 815,
+            "endTime": 945,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217334,
+            "date": 20211216,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346259,
+            "date": 20211202,
+            "startTime": 1345,
+            "endTime": 1515,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 873,
+                    "name": "K018",
+                    "longname": "K018 (Hörsaal - 75(19) - IM)"
+                }
+            ],
+            "lstext": "[1]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346264,
+            "date": 20211209,
+            "startTime": 1345,
+            "endTime": 1515,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 873,
+                    "name": "K018",
+                    "longname": "K018 (Hörsaal - 75(19) - IM)"
+                }
+            ],
+            "lstext": "[1]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346269,
+            "date": 20211216,
+            "startTime": 1345,
+            "endTime": 1515,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 873,
+                    "name": "K018",
+                    "longname": "K018 (Hörsaal - 75(19) - IM)"
+                }
+            ],
+            "lstext": "[1]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346324,
+            "date": 20211201,
+            "startTime": 1345,
+            "endTime": 1515,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 872,
+                    "name": "K017",
+                    "longname": "K017 (Hörsaal - 77(21) - IM)"
+                }
+            ],
+            "lstext": "[2]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346329,
+            "date": 20211208,
+            "startTime": 1345,
+            "endTime": 1515,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 872,
+                    "name": "K017",
+                    "longname": "K017 (Hörsaal - 77(21) - IM)"
+                }
+            ],
+            "lstext": "[2]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346334,
+            "date": 20211215,
+            "startTime": 1345,
+            "endTime": 1515,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 872,
+                    "name": "K017",
+                    "longname": "K017 (Hörsaal - 77(21) - IM)"
+                }
+            ],
+            "lstext": "[2]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346339,
+            "date": 20211222,
+            "startTime": 1345,
+            "endTime": 1515,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 872,
+                    "name": "K017",
+                    "longname": "K017 (Hörsaal - 77(21) - IM)"
+                }
+            ],
+            "lstext": "[2]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346394,
+            "date": 20211201,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                },
+                {
+                    "id": 3842,
+                    "name": "TT",
+                    "longname": "Tutor"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 907,
+                    "name": "K015",
+                    "longname": "K015 (Hörsaal - 72(19) - IM)"
+                }
+            ],
+            "lstext": "[3]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346399,
+            "date": 20211208,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                },
+                {
+                    "id": 24545,
+                    "name": "I1[A-K]",
+                    "longname": "Bachelor IN1[A-K]"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 907,
+                    "name": "K015",
+                    "longname": "K015 (Hörsaal - 72(19) - IM)"
+                }
+            ],
+            "lstext": "[3]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346404,
+            "date": 20211215,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 907,
+                    "name": "K015",
+                    "longname": "K015 (Hörsaal - 72(19) - IM)"
+                }
+            ],
+            "lstext": "[3]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346409,
+            "date": 20211222,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 907,
+                    "name": "K015",
+                    "longname": "K015 (Hörsaal - 72(19) - IM)"
+                }
+            ],
+            "lstext": "[3]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346464,
+            "date": 20211203,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 872,
+                    "name": "K017",
+                    "longname": "K017 (Hörsaal - 77(21) - IM)"
+                }
+            ],
+            "lstext": "[1]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346469,
+            "date": 20211210,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 872,
+                    "name": "K017",
+                    "longname": "K017 (Hörsaal - 77(21) - IM)"
+                }
+            ],
+            "lstext": "[1]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346474,
+            "date": 20211217,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 872,
+                    "name": "K017",
+                    "longname": "K017 (Hörsaal - 77(21) - IM)"
+                }
+            ],
+            "lstext": "[1]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346524,
+            "date": 20211203,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 873,
+                    "name": "K018",
+                    "longname": "K018 (Hörsaal - 75(19) - IM)"
+                }
+            ],
+            "lstext": "[2]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346529,
+            "date": 20211210,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 873,
+                    "name": "K018",
+                    "longname": "K018 (Hörsaal - 75(19) - IM)"
+                }
+            ],
+            "lstext": "[2]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346534,
+            "date": 20211217,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 873,
+                    "name": "K018",
+                    "longname": "K018 (Hörsaal - 75(19) - IM)"
+                }
+            ],
+            "lstext": "[2]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346584,
+            "date": 20211203,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 907,
+                    "name": "K015",
+                    "longname": "K015 (Hörsaal - 72(19) - IM)"
+                }
+            ],
+            "lstext": "[3]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346589,
+            "date": 20211210,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 907,
+                    "name": "K015",
+                    "longname": "K015 (Hörsaal - 72(19) - IM)"
+                }
+            ],
+            "lstext": "[3]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2346594,
+            "date": 20211217,
+            "startTime": 1145,
+            "endTime": 1315,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 907,
+                    "name": "K015",
+                    "longname": "K015 (Hörsaal - 72(19) - IM)"
+                }
+            ],
+            "lstext": "[3]",
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217449,
+            "date": 20211203,
+            "startTime": 815,
+            "endTime": 945,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217454,
+            "date": 20211203,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217459,
+            "date": 20211210,
+            "startTime": 815,
+            "endTime": 945,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217464,
+            "date": 20211210,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217469,
+            "date": 20211217,
+            "startTime": 815,
+            "endTime": 945,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        },
+        {
+            "id": 2217474,
+            "date": 20211217,
+            "startTime": 1000,
+            "endTime": 1130,
+            "kl": [
+                {
+                    "id": 19578,
+                    "name": "IM2",
+                    "longname": "Bachelor IM2"
+                }
+            ],
+            "te": [
+                {
+                    "id": 3218,
+                    "name": "Maw",
+                    "longname": "Mauerer"
+                }
+            ],
+            "su": [
+                {
+                    "id": 5297,
+                    "name": "TI",
+                    "longname": "Theoretische Informatik"
+                }
+            ],
+            "ro": [
+                {
+                    "id": 698,
+                    "name": "virt",
+                    "longname": "virtuell"
+                }
+            ],
+            "activityType": "Vorlesung"
+        }
+    ]
+}

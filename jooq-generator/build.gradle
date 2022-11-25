@@ -1,0 +1,13 @@
+plugins{
+    id 'nu.studer.jooq'
+    id 'java'
+    id 'java-library'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    api("org.jooq:jooq-codegen")
+}

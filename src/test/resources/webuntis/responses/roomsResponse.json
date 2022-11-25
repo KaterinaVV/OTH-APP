@@ -1,0 +1,700 @@
+{
+  "jsonrpc": "2.0",
+  "id": "ID",
+  "result": [
+    {
+      "id": 713,
+      "name": "1.082",
+      "longName": "1.082 (Besprechungsraum Arbeitsagentur – ZWW)",
+      "active": true,
+      "did": 12,
+      "building": "Arbeitsagentur"
+    },
+    {
+      "id": 981,
+      "name": "2.085",
+      "longName": "2.085",
+      "active": true,
+      "did": 17,
+      "building": "Arbeitsagentur"
+    },
+    {
+      "id": 982,
+      "name": "2.086",
+      "longName": "2.086",
+      "active": true,
+      "did": 17,
+      "building": "Arbeitsagentur"
+    },
+    {
+      "id": 22,
+      "name": "A001",
+      "longName": "A001 (Stanglmeier-Hörsaal - 266 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 168,
+      "name": "A003",
+      "longName": "A003 (Hörsaal - 35 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 156,
+      "name": "A104",
+      "longName": "A104 (Hörsaal - 35 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 171,
+      "name": "A105",
+      "longName": "A105 (Hörsaal - 56 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 172,
+      "name": "A106",
+      "longName": "A106 (Hörsaal - 42 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 173,
+      "name": "A107",
+      "longName": "A107 (Hörsaal - 56 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 170,
+      "name": "A108",
+      "longName": "A108 (Hörsaal - 42 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 163,
+      "name": "A203",
+      "longName": "A203 (Hörsaal - 35 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 161,
+      "name": "A204",
+      "longName": "A204 (Hörsaal - 85 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 162,
+      "name": "A205",
+      "longName": "A205 (Hörsaal - 35 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 160,
+      "name": "A207",
+      "longName": "A207 (Hörsaal - 42 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 158,
+      "name": "A208",
+      "longName": "A208 (Hörsaal - 35 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 1003,
+      "name": "ATOM",
+      "longName": "Atomlabor",
+      "active": true,
+      "did": 8,
+      "building": ""
+    },
+    {
+      "id": 988,
+      "name": "AW",
+      "longName": "AW Dummy",
+      "active": true,
+      "did": 15,
+      "building": ""
+    },
+    {
+      "id": 99,
+      "name": "B202",
+      "longName": "B202  (CIP-Pool - 25 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 100,
+      "name": "B203",
+      "longName": "B203 (CIP-Pool - 25 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 895,
+      "name": "B206",
+      "longName": "B206 (CFD-Labor - 20 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 165,
+      "name": "B208",
+      "longName": "B208 (CIP-Pool - 25 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 95,
+      "name": "B213",
+      "longName": "B213 (CIP-Pool - 25 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 1000,
+      "name": "Bib - Ausleihtheke",
+      "longName": "Bib - Ausleihtheke",
+      "active": true,
+      "did": 14,
+      "building": "Seybothstraße"
+    },
+    {
+      "id": 983,
+      "name": "BIZ",
+      "longName": "Bundesinformationszentrum ",
+      "active": true,
+      "did": 17,
+      "building": "Arbeitsagentur"
+    },
+    {
+      "id": 910,
+      "name": "Block",
+      "longName": "Block",
+      "active": true,
+      "did": 2,
+      "building": "Seybothstraße"
+    },
+    {
+      "id": 132,
+      "name": "C001",
+      "longName": "C001 (Labor Heizungs- und Klimatechnik - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 105,
+      "name": "C003",
+      "longName": "C003 (Labor Windkanal - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 934,
+      "name": "C017",
+      "longName": "Labor Energietechnik",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 775,
+      "name": "C-102",
+      "longName": "Labor Strömungsmaschinen",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 102,
+      "name": "C104",
+      "longName": "C104 (Labor PRT Bock - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 149,
+      "name": "C-104",
+      "longName": "C-104 (Labor Fördertechnik und Materialflusstechnik - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 124,
+      "name": "C106",
+      "longName": "C106 (Labor PRT Müller - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 653,
+      "name": "C107",
+      "longName": "C107 (Labor - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 125,
+      "name": "C108",
+      "longName": "C108 (Labor PRT Schrammel - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 660,
+      "name": "C111",
+      "longName": "C111 (Labor - - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 986,
+      "name": "C-111",
+      "longName": "C-111",
+      "active": true,
+      "did": 3,
+      "building": ""
+    },
+    {
+      "id": 679,
+      "name": "C113",
+      "longName": "C113 (Laser-Materialbearbeitung - - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 730,
+      "name": "C117",
+      "longName": "C117 ( Fertigungstechnik und Werkzeugmaschinen - - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 992,
+      "name": "C201",
+      "longName": "C201 (Labor)",
+      "active": true,
+      "did": 15,
+      "building": ""
+    },
+    {
+      "id": 111,
+      "name": "C204",
+      "longName": "C204 (Labor MD - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 924,
+      "name": "C206",
+      "longName": "C206 (Labor MD - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 98,
+      "name": "C207",
+      "longName": "C207 (Labor CAD - 45 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 96,
+      "name": "C208",
+      "longName": "C208 (Labor FEM - 24 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 936,
+      "name": "C211",
+      "longName": "C211 Formular Student",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 721,
+      "name": "C212",
+      "longName": "C212 (Thermische Messtechnik - - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 108,
+      "name": "C213",
+      "longName": "C213 (Labor Automatisierungssysteme - 30 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 94,
+      "name": "C214",
+      "longName": "C214 (Labor CAD - 45 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 525,
+      "name": "C214b",
+      "longName": "CAD-Labor kleiner Raum",
+      "active": true,
+      "did": 3,
+      "building": "Maschinenbau-Gebäude"
+    },
+    {
+      "id": 969,
+      "name": "Campuswiese",
+      "longName": "Campuswiese",
+      "active": true,
+      "did": 10,
+      "building": "Seybothstraße"
+    },
+    {
+      "id": 970,
+      "name": "CareerService",
+      "longName": "Career Service Dummy",
+      "active": true,
+      "did": 10,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 991,
+      "name": "CIP Gymnasium",
+      "longName": "Computersaal Domspatzen Gymnasium",
+      "active": true,
+      "did": 8,
+      "building": ""
+    },
+    {
+      "id": 29,
+      "name": "D001",
+      "longName": "D001 (Hörsaal - 120 - BW)",
+      "active": true,
+      "did": 2,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 30,
+      "name": "D002",
+      "longName": "D002 (Hörsaal - 150 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 31,
+      "name": "D003",
+      "longName": "D003 (Hörsaal - 120 - IM)",
+      "active": true,
+      "did": 7,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 594,
+      "name": "D204",
+      "longName": "D204 (Seminarraum)",
+      "active": true,
+      "did": 8,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 187,
+      "name": "E006",
+      "longName": "E006 (Hörsaal - 60 - BW)",
+      "active": true,
+      "did": 2,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 188,
+      "name": "E007",
+      "longName": "E007 (Hörsaal - 60 - IM)",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ffffff",
+      "did": 6,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 21,
+      "name": "E008",
+      "longName": "E008 (Hörsaal - 20 - SOZ)",
+      "active": true,
+      "did": 1,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 590,
+      "name": "E009",
+      "longName": "E009 (Hörsaal - 20 - ZWW)",
+      "active": true,
+      "did": 12,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 189,
+      "name": "E102",
+      "longName": "E102 (Hörsaal - 60 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 190,
+      "name": "E103",
+      "longName": "E103 (Hörsaal - 60 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 191,
+      "name": "E104",
+      "longName": "E104 (Hörsaal - 60 - MB)",
+      "active": true,
+      "did": 3,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 192,
+      "name": "E105",
+      "longName": "E105 (Hörsaal - 60 - B)",
+      "active": true,
+      "did": 5,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 193,
+      "name": "E202",
+      "longName": "E202 (Hörsaal - 60 - EI)",
+      "active": true,
+      "did": 6,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 194,
+      "name": "E203",
+      "longName": "E203 (Hörsaal - 60 - BAU)",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ffffff",
+      "did": 5,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 195,
+      "name": "E204",
+      "longName": "E204 (Hörsaal - 60 - BAU)",
+      "active": true,
+      "foreColor": "000000",
+      "backColor": "ffffff",
+      "did": 5,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 196,
+      "name": "E205",
+      "longName": "E205 (Hörsaal - 60 - BW)",
+      "active": true,
+      "did": 2,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 989,
+      "name": "ext",
+      "longName": "extern",
+      "active": true,
+      "did": 2,
+      "building": ""
+    },
+    {
+      "id": 671,
+      "name": "Foyer Hörsaalgebäude",
+      "longName": "Foyer Hörsaalgebäude am Forum",
+      "active": true,
+      "did": 10,
+      "building": "Hörsaalgebäude"
+    },
+    {
+      "id": 968,
+      "name": "Foyer IM",
+      "longName": "Foyer Informatik / Mathematik",
+      "active": true,
+      "did": 10,
+      "building": "Informatik/Mathemati"
+    },
+    {
+      "id": 668,
+      "name": "Foyer Mikro",
+      "longName": "Foyer Mikrosystemtechnik",
+      "active": true,
+      "did": 10,
+      "building": "Seybothstraße"
+    },
+    {
+      "id": 734,
+      "name": "G001",
+      "longName": "G001 (PH-CH-Saal - 120 - AM)",
+      "active": true,
+      "did": 18,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 735,
+      "name": "G002",
+      "longName": "G002 (PH-CH-Saal - 120 - AM)",
+      "active": true,
+      "did": 18,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 747,
+      "name": "G003",
+      "longName": "G003 (Seminar - 30 - AM)",
+      "active": true,
+      "did": 18,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 736,
+      "name": "G101",
+      "longName": "G101 (Hörsaal - 60 - BAU)",
+      "active": true,
+      "did": 5,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 737,
+      "name": "G103",
+      "longName": "G103 (Hörsaal - 60 - BAU)",
+      "active": true,
+      "did": 5,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 764,
+      "name": "G104",
+      "longName": "G104 (Hörsaal - 60 - AM)",
+      "active": true,
+      "did": 18,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 743,
+      "name": "G201",
+      "longName": "G201 (CIP-Pool - 40 - BAU)",
+      "active": true,
+      "did": 5,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 744,
+      "name": "G203",
+      "longName": "G203 (CIP-Pool - 40 - B)",
+      "active": true,
+      "did": 5,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 745,
+      "name": "G204",
+      "longName": "G204 (CIP-Pool-40-B)",
+      "active": true,
+      "did": 5,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 896,
+      "name": "H14/H39",
+      "longName": "H14/H39 (Hörsaal - - AM)",
+      "active": true,
+      "did": 8,
+      "building": ""
+    },
+    {
+      "id": 738,
+      "name": "H201",
+      "longName": "H201 (Hörsaal - 60 - BAU)",
+      "active": true,
+      "did": 5,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 739,
+      "name": "H202",
+      "longName": "H202 (Hörsaal - 60 - BAU)",
+      "active": true,
+      "did": 5,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 740,
+      "name": "H204",
+      "longName": "H204 (Hörsaal - 60 - BAU)",
+      "active": true,
+      "did": 5,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 751,
+      "name": "I001",
+      "longName": "I001 (Labor Mikrosensorik - - AM)",
+      "active": true,
+      "did": 18,
+      "building": "Haus der Technik"
+    },
+    {
+      "id": 753,
+      "name": "I002",
+      "longName": "I002 (Labor Analytik - - AM)",
+      "active": true,
+      "did": 18,
+      "building": "Haus der Technik"
+    }
+  ]
+}
